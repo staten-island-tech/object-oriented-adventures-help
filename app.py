@@ -1,6 +1,8 @@
-import json
-## Open the JSON file of movie data
-movies = open("./movies.json", encoding="utf8")
-## create variable "data" that represents the enitre movie list
-data = json.load(movies)
-
+print("Hello Player!")
+User = input("Please enter a username: ")
+difficulty = input("Select a difficulty level (Baby mode/Average human/Super human): ")
+Weapon = input("Select a secondary weapon (Ray gun/Time bomb/Healing stone/Mind bug): ")
+print("Directions: This is an action-adventure game where you'll be able to travese a tiny world and fight bosses.")
+print("The amount of damage you do will be based off of your answers (Try to be creative).")
+print("Interact with characters throughout the map to progress the story.")
+print("Have fun! (probably won't)")
