@@ -1,12 +1,15 @@
 #Beginning
 print("Hello Player!")
 User = input("Please enter a username: ")
-difficulty = input("Select a difficulty level (Baby mode/Average human/Super human): ")
-Weapon = input("Select a secondary weapon (Ray gun/Time bomb/Healing stone/Mind bug): ")
-print("Directions: This is an action-adventure game where you'll be able to travese a tiny world and fight bosses.")
-print("The amount of damage you do will be based off of your answers (Try to be creative).")
-print("Interact with characters throughout the map to progress the story.")
-print("Have fun! (probably won't)")
+print(f"Welcome {User}")
+click = input("")
+if click == "":
+    Weapon = input("Select a weapon (Obliterater Gun/Master Sword/Crystal Heart/Telekenises Remote): ")
+
+click = input("Directions: This is an action-adventure game where you'll be able to travese a tiny world and fight bosses. ")
+click = input("The amount of damage you do will be based off of your answers (Try to be creative).")
+click = input("Interact with characters throughout the map to progress the story.")
+click = input("Lastly, have fun! (probably won't)")
 
 #Movement
 Direction = input("Forward/Backward/Lef/Right:  ")
@@ -24,4 +27,4 @@ print("You've stumbled across [NPC]")
 npc = input("Press (E) to interact: ")
 if npc == "e":
     print("[NPC]: Hello there! I'm tired and don't have enough energy to talk to you.")
-
+    print("GO AWAY!")
