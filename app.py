@@ -1,5 +1,4 @@
 #Beginning
-print("Hello Player!")
 User = input("Please enter a username: ")
 print(f"Welcome {User}")
 click = input("")
@@ -12,7 +11,7 @@ click = input("Interact with characters throughout the map to progress the story
 click = input("Lastly, have fun! (probably won't) ")
 
 #Movement
-Direction = input("Forward/Backward/Lef/Right: ")
+Direction = input("Forward/Backward/Left/Right: ")
 if Direction == "Left" or "left":
     print(f"Moving {Direction}")
 elif Direction == "Right" or "right":
@@ -27,9 +26,23 @@ print("You've stumbled across [Michael]")
 npc = input("Press (E) to interact: ")
 if npc == "e":
     click = input("[Michael]: Hello there! I'm tired and don't have enough energy to talk to you. ")
-    print("GO AWAY!")
+    click = input("GO AWAY!")
 
 #Tutorial
 click = input("You've just interacted with your first NPC ")
 click = input("NPCs will be scattered throughout the map ")
 click = input("You'll be able to interact with them but they won't help much ")
+
+#Movement 2
+Direction = input("Forward/Backward/Left/Right: ")
+if Direction == "Left" or "left":
+    print(f"Moving {Direction}")
+elif Direction == "Right" or "right":
+    print(f"Moving {Direction}")
+elif Direction == "Forward" or "forward":
+    print(f"Moving {Direction}")
+elif Direction == "Backward" or "backward":
+    print(f"Moving {Direction}")
+
+#Collectables
+print("You've collected a [")
