@@ -2,7 +2,10 @@
 # Directions
 # Movement Forward/Backward/Left/Right
 
-# Player Stats - HP/ATK/DMG
+# Player Stats - HP/ATK
 # Monster Stats - HP/DIF
 # Weapons Stats - DMG
-# Chest Types - Noob/Good/Epic/Ultimate
+# Chest Types - common, rare, epic, mythic
+
+# Monsters spawn randomly
+# Chests spawn randomly

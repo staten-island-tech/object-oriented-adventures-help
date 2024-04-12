@@ -23,26 +23,13 @@ elif Direction == "Backward" or "backward":
 
 #NPCs
 print("You've stumbled across [Michael]")
-npc = input("Press (E) to interact: ")
+print("Press (E) to interact")
+npc = input("Press (X) to ignore: ")
 if npc == "e":
     click = input("[Michael]: Hello there! I'm tired and don't have enough energy to talk to you. ")
     click = input("GO AWAY!")
-
-#Tutorial
-click = input("You've just interacted with your first NPC ")
-click = input("NPCs will be scattered throughout the map ")
-click = input("You'll be able to interact with them but they won't help much ")
-
-#Movement 2
-Direction = input("Forward/Backward/Left/Right: ")
-if Direction == "Left" or "left":
-    print(f"Moving {Direction}")
-elif Direction == "Right" or "right":
-    print(f"Moving {Direction}")
-elif Direction == "Forward" or "forward":
-    print(f"Moving {Direction}")
-elif Direction == "Backward" or "backward":
-    print(f"Moving {Direction}")
-
-#Collectables
-print("You've collected a [")
+    click = input("You've just interacted with your first NPC ")
+    click = input("NPCs will be scattered throughout the map ")
+    click = input("You'll be able to interact with them but they won't help much ")
+else:
+    print("END")
