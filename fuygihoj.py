@@ -5,38 +5,42 @@ Patk = 15
 player.append({"Php":Php, "Patk":Patk})
 
 Slime = []
-Shp = 30
-Satk = 5
-Slime.append({"Shp":Shp, "Satk":Satk})
+Mhp = 30
+Matk = 5
+Slime.append({"Shp":Mhp, "Satk":Matk})
 
 Blaze = []
-Bhp = 65
-Batk = 15
-Blaze.append({"Bhp":Bhp, "Batk":Batk})
+Mhp = 65
+Matk = 15
+Blaze.append({"Bhp":Mhp, "Batk":Matk})
 
 Helios = []
-Hhp = 60
-Hatk = 15
-Helios.append({"Hhp":Hhp, "Hatk":Hatk})
+Mhp = 60
+Matk = 15
+Helios.append({"Hhp":Mhp, "Hatk":Matk})
 
 Octo = []
-Ohp = 45
-Oatk = 12
-Octo.append({"Ohp":Ohp, "Oatk":Ohp})
+Mhp = 45
+Matk = 12
+Octo.append({"Ohp":Mhp, "Oatk":Mhp})
+
+
 
 #Weapons
-Ray_gun = []
-Rdmg = 8
-Ray_gun.append({"Rdmg":Rdmg})
+class weapons():
+    
+        Ray_gun = []
+        Rdmg = 8
+        Ray_gun.append({"Rdmg":Rdmg})
 
-Fire_sword = []
-Fdmg = 12
-Fire_sword.append({"Fdmg":Fdmg})
+        Fire_sword = []
+        Fdmg = 12
+        Fire_sword.append({"Fdmg":Fdmg})
 
-Gernade = []
-Gdmg = 3
-Gernade.append({"Gdmg":Gdmg})
+        Gernade = []
+        Gdmg = 3
+        Gernade.append({"Gdmg":Gdmg})
 
-The_power_of_the_sun = []
-Pdmg = 10000000000000
-The_power_of_the_sun.append({"pdmg":Pdmg})
+        The_power_of_the_sun = []
+        Pdmg = 10000000000000
+        The_power_of_the_sun.append({"pdmg":Pdmg})
