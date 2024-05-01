@@ -3,32 +3,23 @@ import random
 #Random
 def Random():
     random_number = random.randint(1,25)
-    if random_number in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]:
+    if random_number in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]:
         print("Nothing")
-    if random_number in [18,19,20,21,22,23]:
-        print(slime)
+    if random_number in [16,20]:
+        print(Slime)
+    if random_number in [17,21]:
+        print(Blaze)
+    if random_number in [18,22]:
+        print(Helios)
+    if random_number in [19,23]:
+        print(Octo)
     if random_number in [24,25]:
         print("Chest")
 
-    Slime = 3
-    Mhp = 30
-    Matk = 5
-    Slime.append({"Shp":Mhp, "Satk":Matk})
-
-    Blaze = []
-    Mhp = 65
-    Matk = 15
-    Blaze.append({"Bhp":Mhp, "Batk":Matk})
-
-    Helios = []
-    Mhp = 60
-    Matk = 15
-    Helios.append({"Hhp":Mhp, "Hatk":Matk})
-
-    Octo = []
-    Mhp = 45
-    Matk = 12
-    Octo.append({"Ohp":Mhp, "Oatk":Mhp})
+Slime = "[Slime] HP:(30) ATK:(5)"
+Blaze = "[Blaze] HP:(65) ATK:(15)"
+Helios = "[Helios] HP:(60) ATK:(15)"
+Octo = "[Octo] HP:(45} ATK:(12)"
 
 User = input("Please enter a username: ")
 print(f"Welcome {User}")
