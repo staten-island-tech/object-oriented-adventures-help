@@ -1,46 +1,12 @@
-#Monsters
-player = []
-Php = 100
-Patk = 15
-player.append({"Php":Php, "Patk":Patk})
-
-Slime = []
-Mhp = 30
-Matk = 5
-Slime.append({"Shp":Mhp, "Satk":Matk})
-
-Blaze = []
-Mhp = 65
-Matk = 15
-Blaze.append({"Bhp":Mhp, "Batk":Matk})
-
-Helios = []
-Mhp = 60
-Matk = 15
-Helios.append({"Hhp":Mhp, "Hatk":Matk})
-
-Octo = []
-Mhp = 45
-Matk = 12
-Octo.append({"Ohp":Mhp, "Oatk":Mhp})
-
-
-
-#Weapons
-class weapons():
-    
-        Ray_gun = []
-        Rdmg = 8
-        Ray_gun.append({"Rdmg":Rdmg})
-
-        Fire_sword = []
-        Fdmg = 12
-        Fire_sword.append({"Fdmg":Fdmg})
-
-        Gernade = []
-        Gdmg = 3
-        Gernade.append({"Gdmg":Gdmg})
-
-        The_power_of_the_sun = []
-        Pdmg = 10000000000000
-        The_power_of_the_sun.append({"pdmg":Pdmg})
+Monsters = [{
+        'slime':"HP:(30) ATK:(5)",
+}
+{
+        'blaze':"HP:(65) ATK:(15)",
+}
+{
+        'helios':"HP:(60) ATK:(15)",
+}
+{
+        'octo':"HP:(45) ATK:(12)",
+}]
