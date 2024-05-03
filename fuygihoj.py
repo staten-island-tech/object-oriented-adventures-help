@@ -35,12 +35,15 @@ class weapons():
 
         Fire_sword = []
         Fdmg = 12
+        Rarity =  "Uncommon" 
         Fire_sword.append({"Fdmg":Fdmg})
 
         Gernade = []
         Gdmg = 3
+        Rarity = "Common"
         Gernade.append({"Gdmg":Gdmg})
 
         The_power_of_the_sun = []
         Pdmg = 10000000000000
+        Rarity = "Mythic"
         The_power_of_the_sun.append({"pdmg":Pdmg})
