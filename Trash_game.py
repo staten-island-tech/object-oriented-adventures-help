@@ -2,11 +2,28 @@ import random
 
 #Random
 inventory = []
+def loot():
+    loot = random.randint(1,40)
+    if loot in [1,2,3,4,5,6,7,8,9,10,11,12,13,14]:
+        print(Ray_gun)
+        inventory.append
+    if loot in [15,16,17,18,19,20,21,22]:
+        print(Fire_sword)
+        inventory.append
+    if loot in [23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39]:
+        print(Gernade)
+        inventory.append
+    if loot in [40]:
+        print(The_power_of_the_sun)
+        inventory.append
 
 def Random():
     random_number = random.randint(1,23)
-    if random_number in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]:
+    if random_number in [1,2,3,4,5,6,7,8,9,10,11,12,13]:
         print("Nothing")
+    if random_number in [14,15]:
+        print("found loot")
+        loot() 
     if random_number in [16,20]:
         print(Slime)
     if random_number in [17,21]:
@@ -21,16 +38,7 @@ Blaze = "[Blaze] HP:(65) ATK:(15)"
 Helios = "[Helios] HP:(60) ATK:(15)"
 Octo = "[Octo] HP:(45} ATK:(12)"
 
-def loot():
-    loot = random.randint(1,40)
-    if loot in [1,2,3,4,5,6,7,8,9,10,11,12,13,14]:
-        print(Ray_gun)
-    if loot in [15,16,17,18,19,20,21,22]:
-        print(Fire_sword)
-    if loot in [23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39]:
-        print(Gernade)
-    if loot in [40]:
-        print(The_power_of_the_sun)
+
 
 Ray_gun = "[Ray Gun] DMG:(8)"
 Fire_sword = "[Fire Sword] DMG:(12)"
