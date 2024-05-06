@@ -44,7 +44,7 @@ if click == "":
     click = input("Throughout the game you can collect many chests and fight various monsters ")
     click = input("Chests will contain weapons of various rarities depending on your luck ")
     click = input("Use these weapons to fight monsters ")
-    click = input("Lastly, have fun! (probably won't) ")
+    click = input("Lastly, have fun! (you probably won't) ")
 
 for i in range(24973932195):
     Direction = input("Forward/Backward/Left/Right: ")
