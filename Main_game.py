@@ -92,3 +92,4 @@ for i in range(24973932195):
         loot()
         inventory.append(loot)
         print(inventory)
+#test
