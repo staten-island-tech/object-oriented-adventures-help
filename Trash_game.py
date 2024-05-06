@@ -38,9 +38,7 @@ Blaze = "[Blaze] HP:(65) ATK:(15)"
 Helios = "[Helios] HP:(60) ATK:(15)"
 Octo = "[Octo] HP:(45} ATK:(12)"
 
-<<<<<<< HEAD
 
-=======
 def loot():
     loot = random.randint(0,100)
     if loot in [3,6,9,12,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60,63,66,69,72,75,78,81,84,87,90,93,96,99]:
@@ -51,7 +49,7 @@ def loot():
         print("You found a grenade",Gernade)
     if loot in [1,100]:
         print("You've found", The_power_of_the_sun)
->>>>>>> 680748d2e4762e76b94f51acfb455139cd58e8b7
+
 
 Ray_gun = "[Ray Gun] DMG:(8)"
 Fire_sword = "[Fire Sword] DMG:(12)"
@@ -74,16 +72,23 @@ for i in range(24973932195):
         print(f"Moving {Direction}")
         Random()
         loot()
+        if Random():
+            print(f"Select weapon:")
     elif Direction == "Right" or "right":
         print(f"Moving {Direction}")
         Random()
         loot()
+        if Random():
+            print(f"Select weapon:")
     elif Direction == "Forward" or "forward":
         print(f"Moving {Direction}")
         Random()
         loot()
+        if Random():
+            print(f"Select weapon:")
     elif Direction == "Backward" or "backward":
         print(f"Moving {Direction}")
         Random()
         loot()
- 
+        inventory.append(loot)
+        print(inventory)
