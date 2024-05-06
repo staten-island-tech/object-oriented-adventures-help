@@ -78,18 +78,17 @@ for i in range(24973932195):
         print(f"Moving {Direction}")
         Random()
         loot()
-        if Random():
-            print(f"Select weapon:")
+        inventory.append(loot)
+        print(inventory)
     elif Direction == "Forward" or "forward":
         print(f"Moving {Direction}")
         Random()
         loot()
-        if Random():
-            print(f"Select weapon:")
+        inventory.append(loot)
+        print(inventory)
     elif Direction == "Backward" or "backward":
         print(f"Moving {Direction}")
         Random()
         loot()
         inventory.append(loot)
         print(inventory)
-#test
