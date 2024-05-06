@@ -6,16 +6,16 @@ def loot():
     loot = random.randint(1,40)
     if loot in [1,2,3,4,5,6,7,8,9,10,11,12,13,14]:
         print(Ray_gun)
-        inventory.append
+
     if loot in [15,16,17,18,19,20,21,22]:
         print(Fire_sword)
-        inventory.append
+
     if loot in [23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39]:
         print(Gernade)
-        inventory.append
+
     if loot in [40]:
         print(The_power_of_the_sun)
-        inventory.append
+
 
 def Random():
     random_number = random.randint(1,23)
@@ -56,6 +56,14 @@ Fire_sword = "[Fire Sword] DMG:(12)"
 Gernade = "[Gernade] DMG:(3)"
 The_power_of_the_sun = "[The Power of the Sun] DMG:(10000000000000)"
 
+
+def npc():
+    person = random.randint(0,10)
+    if person in [1,5,6]:
+        print("Bobby: Hello there!")
+    if person in [2,3,7]:
+        print("Matthew: I hate Mondays...")
+
 User = input("Please enter a username: ") 
 print(f"Welcome {User}")
 click = input("")
@@ -72,23 +80,22 @@ for i in range(24973932195):
         print(f"Moving {Direction}")
         Random()
         loot()
-        if Random():
-            print(f"Select weapon:")
+
+        print(inventory)
     elif Direction == "Right" or "right":
         print(f"Moving {Direction}")
         Random()
         loot()
-        inventory.append(loot)
+
         print(inventory)
     elif Direction == "Forward" or "forward":
         print(f"Moving {Direction}")
         Random()
         loot()
-        inventory.append(loot)
+
         print(inventory)
     elif Direction == "Backward" or "backward":
         print(f"Moving {Direction}")
         Random()
         loot()
-        inventory.append(loot)
-        print(inventory)
+
