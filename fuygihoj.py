@@ -1,3 +1,17 @@
+
+Monsters = [{
+        'slime':"HP:(30) ATK:(5)",
+}
+{
+        'blaze':"HP:(65) ATK:(15)",
+}
+{
+        'helios':"HP:(60) ATK:(15)",
+}
+{
+        'octo':"HP:(45) ATK:(12)",
+}]
+=======
 #Monsters
 player = []
 Php = 100
@@ -47,3 +61,4 @@ class weapons():
         Pdmg = 10000000000000
         Rarity = "Mythic"
         The_power_of_the_sun.append({"pdmg":Pdmg})
+
