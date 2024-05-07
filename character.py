@@ -6,5 +6,8 @@ class Character:
         self.damage = damage 
 
     def attack(self, target) -> None:
-        target.health -= self.damage
-        target.health = max(target.health, 0)
+        target.hp -= self.damage
+        target.hp = max(target.health, 0)
+
+class Slime(Character):
+
