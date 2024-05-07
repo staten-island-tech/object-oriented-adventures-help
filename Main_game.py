@@ -62,7 +62,11 @@ def npc():
     if person in [1,5,6]:
         print("Bobby: Hello there!")
     if person in [2,3,7]:
-        print("Matthew: I hate Mondays...")
+        print("Jamil: I hate Thursdays...")
+    if person in [4,8,9]:
+        print("Michael: Hola! Como Estas?")
+        if person in [10]:
+            print("Dr. Octavious: The power of the sun, in the palm of my hands.")
 
 User = input("Please enter a username: ") 
 print(f"Welcome {User}")
@@ -73,29 +77,30 @@ if click == "":
     click = input("Use these weapons to fight monsters ")
     click = input("Lastly, have fun! (probably won't) ")
 
-for i in range(24973932195):
+for i in range(2497393215):
     Direction = input("Forward/Backward/Left/Right: ")
     direction = Direction.upper()
     if Direction == "Left" or "left":
         print(f"Moving {Direction}")
         Random()
         loot()
+        npc()
 
-        print(inventory)
     elif Direction == "Right" or "right":
         print(f"Moving {Direction}")
         Random()
         loot()
+        npc()
 
-        print(inventory)
     elif Direction == "Forward" or "forward":
         print(f"Moving {Direction}")
         Random()
         loot()
+        npc()
 
-        print(inventory)
     elif Direction == "Backward" or "backward":
         print(f"Moving {Direction}")
         Random()
         loot()
-
+        npc()
+        
