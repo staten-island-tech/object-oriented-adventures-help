@@ -36,11 +36,12 @@ def Random():
         print("[npc]")
         npc()
 
-Slime = "[Slime] HP:(30) ATK:(5)"
-Blaze = "[Blaze] HP:(65) ATK:(15)"
-Helios = "[Helios] HP:(60) ATK:(15)"
-Octo = "[Octo] HP:(45} ATK:(12)"
-
+class Monster:
+    def __init__(self, name: str, health: int, damage: int) -> None:
+        self.name = name 
+        self.health = health
+        self.damage = damage
+Slime = Monster("Slime","30","5")
 
 def loot():
     loot = random.randint(0,100)
@@ -98,3 +99,8 @@ for i in range(2497393215):
     elif Direction == "Backward" or "backward":
         print(f"[Moving {Direction}]")
         Random()
+
+""" Slime = "[Slime] HP:(30) ATK:(5)"
+Blaze = "[Blaze] HP:(65) ATK:(15)"
+Helios = "[Helios] HP:(60) ATK:(15)"
+Octo = "[Octo] HP:(45} ATK:(12)" """
