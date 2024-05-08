@@ -9,4 +9,4 @@ class Character:
         target.health -= self.damage
         target.health = max(target.health, 0)
 
-
+class slime(Character):
