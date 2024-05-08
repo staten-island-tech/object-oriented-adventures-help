@@ -18,13 +18,13 @@ def loot():
 
 
 def Random():
-    random_number = random.randint(1,23)
-    if random_number in [1,2,3,4,5,6,7,8,9,10,11,12,13]:
+    random_number = random.randint(1,27)
+    if random_number in [1,2,3,4,5,6,7,8,9,10]:
         print("Nothing")
-    if random_number in [14,15]:
+    if random_number in [14,15,11,12]:
         print("found loot")
         loot() 
-    if random_number in [16,20]:
+    if random_number in [16,20,13]:
         print(Slime)
     if random_number in [17,21]:
         print(Blaze)
@@ -32,6 +32,9 @@ def Random():
         print(Helios)
     if random_number in [19,23]:
         print(Octo)
+    if random_number in [24,25,26,27]:
+        print("[npc]")
+        npc()
 
 Slime = "[Slime] HP:(30) ATK:(5)"
 Blaze = "[Blaze] HP:(65) ATK:(15)"
@@ -45,9 +48,9 @@ def loot():
         print("You've found a", Ray_gun)
     if loot in [10,20,30,40,50,60,70,80,90,100,15,20,25,30,65]:
         print("You've found",Fire_sword)
-    if loot in [2,3,5,7,11,13,17,19,23,29,31,34,37,]:
+    if loot in [2,3,5,7,11,13,17,19,23,29,31,34,37,100]:
         print("You found a grenade",Gernade)
-    if loot in [1,100]:
+    if loot in [1]:
         print("You've found", The_power_of_the_sun)
 
 
@@ -65,8 +68,8 @@ def npc():
         print("Jamil: I hate Thursdays...")
     if person in [4,8,9]:
         print("Michael: Hola! Como Estas?")
-        if person in [10]:
-            print("Dr. Octavious: The power of the sun, in the palm of my hands.")
+    if person in [10]:
+        print("Dr. Octavious: The power of the sun, in the palm of my hands.")
 
 User = input("Please enter a username: ") 
 print(f"Welcome {User}")
@@ -81,26 +84,17 @@ for i in range(2497393215):
     Direction = input("Forward/Backward/Left/Right: ")
     direction = Direction.upper()
     if Direction == "Left" or "left":
-        print(f"Moving {Direction}")
+        print(f"[Moving {Direction}]")
         Random()
-        loot()
-        npc()
 
     elif Direction == "Right" or "right":
-        print(f"Moving {Direction}")
+        print(f"[Moving {Direction}]")
         Random()
-        loot()
-        npc()
 
     elif Direction == "Forward" or "forward":
-        print(f"Moving {Direction}")
+        print(f"[Moving {Direction}]")
         Random()
-        loot()
-        npc()
 
     elif Direction == "Backward" or "backward":
-        print(f"Moving {Direction}")
+        print(f"[Moving {Direction}]")
         Random()
-        loot()
-        npc()
-        
