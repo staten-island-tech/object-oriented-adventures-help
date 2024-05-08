@@ -1,13 +1,12 @@
 class Character:
-    def _init_(self, name: str, health: int, damage: int):
+    def __init__(self, name: str, health: int, damage: int) -> None:
         self.name = name 
         self.health = health
         self.health_max = health
         self.damage = damage 
 
     def attack(self, target) -> None:
-        target.hp - self.damage
-        target.hp = max(target.health, 0)
-
+        target.health -= self.damage
+        target.health = max(target.health, 0)
 
 
