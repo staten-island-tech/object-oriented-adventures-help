@@ -1,5 +1,5 @@
 import random
-
+from monster import Monster
 #Random
 inventory = []
 def loot():
@@ -36,12 +36,10 @@ def Random():
         print("[npc]")
         npc()
 
-class Monster:
-    def __init__(self, name: str, health: int, damage: int) -> None:
-        self.name = name 
-        self.health = health
-        self.damage = damage
-Slime = Monster("Slime","30","5")
+Slime = Monster(name = "Slime",hp = 30, hp_max = 30, dmg = 5)
+Blaze = Monster(name = "Blaze",hp = 65, hp_max = 65, dmg = 15)
+Helios = Monster(name = "Helios",hp = 60, hp_max = 60, dmg = 15)
+Octo = Monster(name = "octo",hp = 45, hp_max = 45, dmg = 12)
 
 def loot():
     loot = random.randint(0,100)
