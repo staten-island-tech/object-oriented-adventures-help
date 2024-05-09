@@ -43,6 +43,7 @@ def Random():
     if random_number in [19,23]:
         print(Octo)
 
+
 Slime = "[Slime] HP:(30) ATK:(5)"
 Blaze = "[Blaze] HP:(65) ATK:(15)"
 Helios = "[Helios] HP:(60) ATK:(15)"
