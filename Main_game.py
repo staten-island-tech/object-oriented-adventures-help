@@ -3,22 +3,22 @@ from monster import Monster
 #Random
 inventory = []
 def loot():
-    loot = random.randint(1,40)
-    if loot in [1,2,3,4,5,6,7,8,9,10,11,12,13,14]:
+    loot = random.randint(1,50)
+    if loot in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,41,42,43]:
         print(Ray_gun)
 
-    if loot in [15,16,17,18,19,20,21,22]:
+    if loot in [15,16,17,18,19,20,21,22,44,49,40]:
         print(Fire_sword)
 
-    if loot in [23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39]:
+    if loot in [23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,45,46,47,48]:
         print(Gernade)
 
-    if loot in [40]:
+    if loot in [50]:
         print(The_power_of_the_sun)
 
 
 def Random():
-    random_number = random.randint(1,27)
+    random_number = random.randint(1,31)
     if random_number in [1,2,3,4,5,6,7,8,9,10]:
         print("Nothing")
     if random_number in [14,15,11,12]:
@@ -32,14 +32,21 @@ def Random():
         print(Helios)
     if random_number in [19,23]:
         print(Octo)
+    if random_number in [28,29]:
+        print(Flaker)
+    if random_number in [31,30]:
+        print(Leviathon)
     if random_number in [24,25,26,27]:
         print("[npc]")
         npc()
 
-Slime = Monster(name = "Slime",hp = 30, hp_max = 30, dmg = 5)
-Blaze = Monster(name = "Blaze",hp = 65, hp_max = 65, dmg = 15)
-Helios = Monster(name = "Helios",hp = 60, hp_max = 60, dmg = 15)
-Octo = Monster(name = "octo",hp = 45, hp_max = 45, dmg = 12)
+Slime = Monster(name = "Slime", hp = 30, hp_max = 30, dmg = 5)
+Blaze = Monster(name = "Blaze", hp = 65, hp_max = 65, dmg = 15)
+Helios = Monster(name = "Helios", hp = 60, hp_max = 60, dmg = 15)
+Octo = Monster(name = "octo", hp = 45, hp_max = 45, dmg = 12)
+Flaker = Monster(name = "Flaker", hp = 72, hp_max = 72, dmg = 17)
+Leviathon = Monster(name = "Leviathon", hp = 105, hp_max = 105, dmg = 26)
+
 
 def loot():
     loot = random.randint(0,100)
