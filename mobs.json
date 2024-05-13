@@ -1,4 +1,22 @@
 [
     {
-        "Name": ""
-    
+        "name": "Slime",
+        "mob_hp": "30",
+        "mob_atk": "5"
+    },
+    {
+        "name": "Blaze",
+        "mob_hp": "65",
+        "mob_atk": "15"
+    },
+    {
+        "name": "Helios",
+        "mob_hp": "60",
+        "mob_atk": "15"
+    },
+    {
+        "name": "Octo",
+        "mob_hp": "45",
+        "mob_atk": "12"
+    }
+]

@@ -47,12 +47,9 @@ print("Press (E) to interact")
 npc = input("Press (X) to ignore: ")
 if npc == "e":
     click = input("[Michael]: Hello there! I'm tired and don't have enough energy to talk to you. ")
-    delay_print("GO AWAY!")
-    time.sleep(0.5)
-    delay_print("You've just interacted with your first NPC ")
-    time.sleep(0.5)
-    delay_print("NPCs will be scattered throughout the map ")
-    time.sleep
-    delay_print("You'll be able to interact with them but they won't help much ")
+    click = input("GO AWAY!")
+    click = input("You've just interacted with your first NPC ")
+    click = input("NPCs will be scattered throughout the map ")
+    click = input("You'll be able to interact with them but they won't help much ")
 else:
     print("You walked past the NPC")
