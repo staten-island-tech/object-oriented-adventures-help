@@ -1,5 +1,3 @@
-
-
 import random
 
 #Random
@@ -18,14 +16,6 @@ def loot():
     if loot in [40]:
         print(The_power_of_the_sun)
         inventory.append
-    if loot in [99,66,55,77]:
-        print("You found nothing, get scammed.")
-
-def chest():
-    chest = random.randint(1,200)
-    if chest in [1,50,5,20,200,10,30]:
-        print("You've found a chest!")
-    loot()
 
 def Random():
     random_number = random.randint(1,23)
@@ -43,13 +33,22 @@ def Random():
     if random_number in [19,23]:
         print(Octo)
 
-
 Slime = "[Slime] HP:(30) ATK:(5)"
 Blaze = "[Blaze] HP:(65) ATK:(15)"
 Helios = "[Helios] HP:(60) ATK:(15)"
 Octo = "[Octo] HP:(45} ATK:(12)"
-    
 
+
+def loot():
+    loot = random.randint(0,100)
+    if loot in [3,6,9,12,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60,63,66,69,72,75,78,81,84,87,90,93,96,99]:
+        print("You've found a", Ray_gun)
+    if loot in [10,20,30,40,50,60,70,80,90,100,15,20,25,30,65]:
+        print("You've found",Fire_sword)
+    if loot in [2,3,5,7,11,13,17,19,23,29,31,34,37,]:
+        print("You found a grenade",Gernade)
+    if loot in [1,100]:
+        print("You've found", The_power_of_the_sun)
 
 
 Ray_gun = "[Ray Gun] DMG:(8)"
@@ -63,8 +62,8 @@ click = input("")
 if click == "":
     click = input("Throughout the game you can collect many chests and fight various monsters ")
     click = input("Chests will contain weapons of various rarities depending on your luck ")
-    click = input("Use these weapons to fight monsters ")   
-    click = input("Lastly, have fun! (you probably won't) ")
+    click = input("Use these weapons to fight monsters ")
+    click = input("Lastly, have fun! (probably won't) ")
 
 for i in range(24973932195):
     Direction = input("Forward/Backward/Left/Right: ")
@@ -73,35 +72,18 @@ for i in range(24973932195):
         print(f"Moving {Direction}")
         Random()
         loot()
-<<<<<<< HEAD
-        
-=======
-        if Random():
-            print(f"Select weapon:")
->>>>>>> main
+
     elif Direction == "Right" or "right":
         print(f"Moving {Direction}")
         Random()
         loot()
-<<<<<<< HEAD
-        
-=======
-        if Random():
-            print(f"Select weapon:")
->>>>>>> main
+
     elif Direction == "Forward" or "forward":
         print(f"Moving {Direction}")
         Random()
         loot()
-<<<<<<< HEAD
-        
-=======
-        if Random():
-            print(f"Select weapon:")
->>>>>>> main
+
     elif Direction == "Backward" or "backward":
         print(f"Moving {Direction}")
         Random()
         loot()
-        inventory.append(loot)
-        print(inventory)
