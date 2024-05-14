@@ -4,13 +4,15 @@ class suits():
         self.ability = ability
         self.dmg = dmg
 
-Shockwave = suits(name = "Shockwave Suit",ability = "Energy Field",dmg = +3)
-Magman = suits(name = "Magman Suit",ability = "Lava Spray",dmg = +2.5)
-Hydro = suits(name = "Hydro Suit",ability = "Water Pump",dmg = +3)
-OcTitan = suits(name = "OcTitan Suit",ability = "Sun",dmg = +65)
+Shockwave = "[Ability]:Energy Field || [Damage]:+3:"
+Magman = "[Ability]:Lava Spray || [Damage]:+2.5:"
+Hydro = "[Ability]:Water Pump || [Damage]:+3:"
+OcTitan = "[Ability]:SUN || [Damage]:+65:"
 
 Select = input("Select a suit (Shockwave/Magman/Hydro): ")
 if Select == "643":
     print("OcTitan Suit selected")
-if Select == "Hydro" or "hydro":
-    print(f"{Select} Suit selected")
+    print(OcTitan)
+elif Select == "Magman" or "magman":
+    print("Magman Suit selected")
+    print(Magman)
