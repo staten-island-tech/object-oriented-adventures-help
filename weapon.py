@@ -7,16 +7,13 @@ class weapon:
 
 
 
-fists = weapon(name="Fists"
-                      weapon_type="blunt"
-                      damage=2
-                      value=10)
+fists = weapon(name="Fists", weapon_type="blunt", damage=2, value=10)
 
 
 
 wooden_sword = weapon(name="wooden_sword"
-                      weapon_type="sharp"
-                      damage=3
+                    weapon_type="sharp"
+                      damage=4
                       value=10)
 
 
