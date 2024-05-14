@@ -1,4 +1,4 @@
-from weapon import fists
+from weapon import wooden_sword
 
 
 
@@ -8,7 +8,7 @@ class Character:
         self.health = health
         self.health_max = health
         
-        self.weapon = fists
+        self.weapon = wooden_sword
 
     def attack(self, target) -> None:
         target.health -= self.weapon.damage

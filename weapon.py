@@ -7,18 +7,22 @@ class weapon:
 
 
 
-fists = weapon(name="Fists", weapon_type="blunt", damage=2, value=10)
+fists = weapon(name="Fists", 
+               weapon_type="blunt", 
+               damage=2, 
+               value=0)
+
+wooden_sword = weapon(name="wooden_sword", 
+               weapon_type="sharp", 
+               damage=4, 
+               value=10)
+
+Ray_gun = weapon(name="ray_gun", 
+               weapon_type="ranged", 
+               damage=10, 
+               value=15)
 
 
 
-wooden_sword = weapon(name="wooden_sword"
-                    weapon_type="sharp"
-                      damage=4
-                      value=10)
 
-
-Ray_gun = weapon(name="Ray_Gun"
-                      weapon_type="ranged"
-                      damage=8
-                      value=25)
 
