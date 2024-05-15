@@ -14,5 +14,6 @@ if Select == "643":
     print("OcTitan Suit selected")
     print(OcTitan)
 elif Select == "Magman" or "magman":
-    print("Magman Suit selected")
-    print(Magman)
+    print(f"{Select} Suit selected")
+elif Select == "hydro":
+    print(f"{Select} Suit selected")
