@@ -4,8 +4,16 @@ import random
 
 #Random
 inventory = []
+
+def chest():
+    chest = random.randint(1,50)
+    if chest in [1,5,10,11,15,20,21,25,30,31,35,40,]:
+        print("You've found a chest!!!")
+        open_chest = input("Press E to open")
+        if input= e 
+
 def loot():
-    loot = random.randint(1,200)
+    loot = random.randint(1,100)
     if loot in [1,2,3,4,5,6,7,8,9,10,11,12,13,14]:
         print(Ray_gun)
         inventory.append
@@ -14,7 +22,7 @@ def loot():
         inventory.append
     if loot in [23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39]:
         print(Grenade)
-        inventory.append
+        inventory.append    
     if loot in [40]:
         print(The_power_of_the_sun)
         inventory.append
@@ -25,7 +33,9 @@ def chest():
     chest = random.randint(1,200)
     if chest in [1,50,5,20,200,10,30]:
         print("You've found a chest!")
-    loot()
+    open_chest = input("Press (E) to open the chest")
+    if open_chest == "e" or "E":
+        loot()
 
 def Random():
     random_number = random.randint(1,23)
@@ -72,23 +82,19 @@ for i in range(24973932195):
     if Direction == "Left" or "left":
         print(f"Moving {Direction}")
         Random()
-        loot()
-        
+
     elif Direction == "Right" or "right":
         print(f"Moving {Direction}")
         Random()
-        loot()
-        
+    
     elif Direction == "Forward" or "forward":
         print(f"Moving {Direction}")
         Random()
-        loot()
+
         
     elif Direction == "Backward" or "backward":
         print(f"Moving {Direction}")
         Random()
-        loot()
+
         inventory.append(loot)
         print(inventory)
-    elif Direction == "":
-        print("no direction selected")
