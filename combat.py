@@ -1,7 +1,9 @@
 from character import Hero, Enemy
+from weapon import wooden_sword, Ray_gun
 
 hero = Hero(name="hero", health=100)
-enemy = Enemy(name="enemy", health=30)
+hero.equip(Ray_gun)
+enemy = Enemy(name="enemy", health=30, weapon=wooden_sword)
 
 while True:
     hero.attack(enemy)
