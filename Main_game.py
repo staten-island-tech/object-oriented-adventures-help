@@ -86,6 +86,23 @@ if click == "":
     click = input("Use these weapons to fight monsters ")
     click = input("Lastly, have fun! (probably won't) ")
 
+""" Shockwave = "[Ability]:Energy Field || [Damage]:+3:"
+Magman = "[Ability]:Lava Spray || [Damage]:+2.5:"
+Hydro = "[Ability]:Water Pump || [Damage]:+3:"
+OcTitan = "[Ability]:SUN || [Damage]:+65:"
+Select = input("Select a suit (Shockwave/Magman/Hydro): ").lower()
+if Select == "123":
+    print("OcTitan Suit selected")
+    print(OcTitan)
+elif Select == "magman":
+    print("Magman Suit selected")
+    print(Magman)
+elif Select == "hydro":
+    print("Hydro Suit selected")
+    print(Hydro) 
+elif Select == "shockwave":
+    print(Shockwave) """
+
 for i in range(2497393215):
     Direction = input("Forward/Backward/Left/Right: ")
     direction = Direction.upper()
