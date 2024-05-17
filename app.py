@@ -25,7 +25,7 @@ delay_print("The amount of damage you do will be based off of your answers")
 time.sleep(0.5)
 delay_print("(Try to be creative)\n")
 time.sleep(1)
-delay_print("Interact with characters throughout the map to progress the story\n ")
+delay_print("Interact with characters throughout the map to progress the story\n")
 time.sleep(2)
 delay_print("Lastly, have fun! (probably won't)\n")
 
@@ -44,8 +44,8 @@ elif Direction == "Backward" or "backward":
 #NPCs
 print("You've stumbled across [Michael]")
 print("Press (E) to interact")
-npc = input("Press (X) to ignore: ")
-if npc == "e":
+npc = input("Press (X) to ignore: \n")
+if npc == "e" or "E":
     click = input("[Michael]: Hello there! I'm tired and don't have enough energy to talk to you. ")
     click = input("GO AWAY!")
     click = input("You've just interacted with your first NPC ")
