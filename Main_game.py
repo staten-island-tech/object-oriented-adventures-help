@@ -52,23 +52,19 @@ Leviathon = Monster(name = "Leviathon", hp = 105, hp_max = 105, dmg = 26)
 def loot():
     loot = random.randint(0,100)
     if loot in [3,6,9,12,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60,63,66,69,72,75,78,81,84,87,90,93,96,99]:
-        print("You've found a",Ray_gun.name)
+        print("You've found a",Ray_gun.name, Ray_gun.weapon_type, Ray_gun.damage)
     if loot in [10,20,30,40,50,60,70,80,90,100,15,20,25,30,65]:
-        print("You've found a",Fire_sword.name)
+        print("You've found a",Fire_sword.name, Fire_sword.weapon_type, Fire_sword.damage)
     if loot in [2,3,5,7,11,13,17,19,23,29,31,34,37,100]:
-        print("You found a",Gernade.name)
+        print("You found a",Gernade.name, Gernade.weapon_type, Gernade.damage)
     if loot in [1]:
-        print("You've found",The_power_of_the_sun.name)
+        print("You've found",The_power_of_the_sun.name, The_power_of_the_sun.weapon_type, The_power_of_the_sun.damage)
 
-Fists = weapon(name="Fists", weapon_type="blunt", damage=3, value=0)
-Fire_sword = weapon(name="Fire Sword", weapon_type="sharp", damage=22, value=10)
-Ray_gun = weapon(name="Ray Gun", weapon_type="ranged", damage=14, value=15)
-Gernade = weapon(name="Gernade", weapon_type="ranged", damage=6, value=2)
-
-The_power_of_the_sun = weapon(name="The Power of the Sun",
-    weapon_type="???",
-    damage=1000000000,
-    value=100)
+Fists = weapon(name="Fists", weapon_type="|blunt|", damage=3, value=0)
+Fire_sword = weapon(name="Fire Sword", weapon_type="|sharp|", damage=22, value=10)
+Ray_gun = weapon(name="Ray Gun", weapon_type="|ranged|", damage=14, value=15)
+Gernade = weapon(name="Gernade", weapon_type="|ranged|", damage=6, value=2)
+The_power_of_the_sun = weapon(name="The Power of the Sun", weapon_type="|???|", damage=1000000000, value=100)
 
 def npc():
     person = random.randint(0,10)
