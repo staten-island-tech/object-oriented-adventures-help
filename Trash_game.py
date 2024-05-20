@@ -10,7 +10,7 @@ def chest():
     if chest in [1,5,10,11,15,20,21,25,30,31,35,40,]:
         print("You've found a chest!!!")
         open_chest = input("Press E to open")
-        if input= e 
+        if input= "e" 
 
 def loot():
     loot = random.randint(1,100)
