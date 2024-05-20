@@ -1,3 +1,4 @@
+import math
 from character import Hero, Enemy
 from weapon import wooden_sword, Ray_gun
 
@@ -11,7 +12,4 @@ while True:
 
     print(f"health of {hero.name}: {hero.health}")
     print(f"health of {enemy.name}: {enemy.health}")
-
     input()
-
- 
