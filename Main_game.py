@@ -23,8 +23,7 @@ def Random():
     if random_number in [1,2,3,4,5,6,7,8,9,10]:
         print("Nothing")
     if random_number in [14,15,11,12]:
-        print("found loot")
-        loot() 
+        print("Nothing")
     if random_number in [16,20,13]:
         print(Slime)
     if random_number in [17,21]:
@@ -81,8 +80,8 @@ User = input("Please enter a username: ")
 print(f"Welcome {User}")
 click = input("")
 if click == "":
-    click = input("Throughout the game you can collect many chests and fight various monsters ")
-    click = input("Chests will contain weapons of various rarities depending on your luck ")
+    click = input("Throughout the game you can collect many weapons which can be used to fight various monsters ")
+    click = input("All weapons have a random chance of spawning and deal a certain amount of damage ")
     click = input("Use these weapons to fight monsters ")
     click = input("Lastly, have fun! (probably won't) ")
 
