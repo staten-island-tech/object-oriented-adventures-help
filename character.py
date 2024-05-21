@@ -1,4 +1,4 @@
-from weapon import fists
+from weapon import fists, wooden_sword
 
 
 
@@ -39,4 +39,4 @@ class Enemy(Character):
                  weapon,
                  ) -> None:
         super().__init__(name=name, health=health)
-        self.weapon = weapon
+        self.weapon = wooden_sword

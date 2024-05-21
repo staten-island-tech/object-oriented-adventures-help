@@ -10,6 +10,11 @@ fists = weapon(name="Fists",
     damage=3, 
     value=0)
 
+wooden_sword = weapon(name="wooden_sword", 
+               weapon_type="sharp", 
+               damage=4, 
+               value=5)
+
 Fire_sword = weapon(name="Fire Sword", 
     weapon_type="sharp", 
     damage=22, 

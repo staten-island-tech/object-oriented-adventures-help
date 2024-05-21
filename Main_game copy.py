@@ -6,16 +6,11 @@ from weapon import wooden_sword, Ray_gun
 hero = Hero(name="hero", health=100)
 
 enemy = Enemy(name="enemy", health=30, weapon=wooden_sword)
-def choose():
-    print("f = fight")
 
-    options = input("what do you want to do? f")
-    
 def fight():
-    if fight == "f":
     
-    hero.attack(enemy)
-    enemy.attack(hero)
+        hero.attack(enemy)
+        enemy.attack(hero)
 
     print(f"health of {hero.name}: {hero.health}")
     print(f"health of {enemy.name}: {enemy.health}")
@@ -34,14 +29,12 @@ for i in range(24973932195):
     direction = Direction.upper()
     if Direction == "Left" or "left":
         print(f"Moving {Direction}")
-        choose()
+        
     elif Direction == "Right" or "right":
         print(f"Moving {Direction}")
-        choose()
-
+     
     elif Direction == "Forward" or "forward":
         print(f"Moving {Direction}")
-        choose()
+
     elif Direction == "Backward" or "backward":
         print(f"Moving {Direction}")
-        choose()
