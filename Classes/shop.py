@@ -1,20 +1,25 @@
 # Define an item class to store item details
 class Item:
-  def __init__(self, name, price):
+  def __init__(self, name, price , descripiton):
     self.name = name
     self.price = price
+    self.description = descripiton
+
+
+def currencyfinal()
+      currency - item_to_buy.price = currency_final
 
 # Create some sample items
-potion = Item("Healing Potion", 30)
-sword = Item("Fire Sword🔥🔥🔥 ", 100)
-armor = Item("Leather Armor", 80)
+potion = Item("Healing Potion", 30, "❤️🩹" )
+sword = Item("Fire Sword" , 100 ,"🔥🔥🔥")
+armor = Item("Leather Armor", 80  ,"🛡️")
 
 # Define the shop function
 def shop(inventory, currency):
   # Display items and prices
   print("Welcome to the shop!")
   for item in [potion, sword, armor]:
-    print(f"{item.name}: {item.price} gold")
+    print(f"{item.name}:,  {item.price} gold" ,item.description )
 
   # Get user input for purchase
   while True:
@@ -28,7 +33,7 @@ def shop(inventory, currency):
       # Check if player has enough money
       if currency >= item_to_buy.price:
         inventory.append(item_to_buy.name)  # Add item to inventory
-        currency -= item_to_buy.price  # Deduct price from currency
+        currency -= item_to_buy.price   # Deduct price from currency
         print(f"You bought {item_to_buy.name}!")
       else:
         print("Insufficient funds!")
@@ -44,4 +49,4 @@ shop(inventory, currency)
 
 # Print remaining inventory and currency
 print("Your inventory:", inventory)
-print("Remaining gold:", currency)
+print("Remaining gold:", )
