@@ -6,7 +6,7 @@ class Item:
 
 # Create some sample items
 potion = Item("Healing Potion", 30)
-sword = Item("Iron Sword", 100)
+sword = Item("Fire Sword🔥🔥🔥 ", 100)
 armor = Item("Leather Armor", 80)
 
 # Define the shop function
