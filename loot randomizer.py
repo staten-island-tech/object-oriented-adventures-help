@@ -17,16 +17,36 @@ def loot():
     if loot in [1,200]:
         print(wooden_sword)
         if self.weapon == fists:
-            
+            Hero.equip (wooden_sword)
 
     if loot in [201,350]:
-        print(Ray_gun)
+        print(Gernade)
+        if self.weapon == fists:
+        elif self.weapon == wooden_sword:
+            Hero.equip (Gernade)
 
     if loot in [351,450]:
-        print(Fire_sword)
+        print(Ray_gun)
+        if self.weapon == fists:
+        elif self.weapon == wooden_sword:
+        elif self.weapon == Gernade:
+             Hero.equip (Ray_gun)
 
     if loot in [451,499]:
-        print(Gernade)
-
+        print(Fire_sword)
+        if self.weapon == fists:
+        elif self.weapon == wooden_sword:
+        elif self.weapon == Gernade:
+        elif self.weapon == Ray_gun:
+             Hero.equip (Fire_sword)     
+        
     if loot in [500]:
         print(The_power_of_the_sun)
+        if self.weapon == fists:
+        elif self.weapon == wooden_sword:
+        elif self.weapon == Gernade:
+        elif self.weapon == Ray_gun:
+        elif self.weapon == Fire_sword:
+            Hero.equip (The_power_of_the_sun)
+
+loot()
