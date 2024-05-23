@@ -21,3 +21,17 @@ elif Select == "shockwave":
         self.name = name
         self.ability = ability
         self.dmg = dmg """
+
+
+
+class suits:
+    def __init__(self, name: str, defense: int, damage: int, value: int) -> None:
+        self.name = name 
+        self.defense = defense
+        self.damage = damage
+        self.value = value 
+
+        shockwave = suits(name="showckwave", 
+               defense="sharp", 
+               damage=4, 
+               value=10)
