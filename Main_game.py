@@ -1,3 +1,4 @@
+import random 
 from monster import Monster
 from weapons import weapon
 #Random
@@ -17,7 +18,7 @@ def loot():
         print(The_power_of_the_sun)
 
 
-def Random():
+def random_number():
     random_number = random.randint(1,31)
     if random_number in [1,2,3,4,5,6,7,8,9,10]:
         print("Nothing")
@@ -39,13 +40,13 @@ Blaze = "[Blaze] HP:(65) ATK:(15)"
 Helios = "[Helios] HP:(60) ATK:(15)"
 Octo = "[Octo] HP:(45} ATK:(12)"
 
-    if random_number in [28,29]:
-        print(Flaker)
-    if random_number in [31,30]:
-        print(Leviathon)
-    if random_number in [24,25,26,27]:
-        print("[npc]")
-        npc()
+if random_number in [28,29]:
+    print("Flaker")
+if random_number in [31,30]:
+    print("Leviathon")
+if random_number in [24,25,26,27]:
+    print("[npc]")
+    npc()
 
 Slime = Monster(name = "Slime", hp = 30, hp_max = 30, dmg = 5)
 Blaze = Monster(name = "Blaze", hp = 65, hp_max = 65, dmg = 15)
@@ -72,12 +73,12 @@ Fire_sword = "[Fire Sword] DMG:(12)"
 Gernade = "[Gernade] DMG:(3)"
 The_power_of_the_sun = "[The Power of the Sun] DMG:(10000000000000)"
 
-        print("You've found a",Ray_gun.name)
-    if loot in [10,20,30,40,50,60,70,80,90,100,15,20,25,30,65]:
+print("You've found a",Ray_gun.name)
+if loot in [10,20,30,40,50,60,70,80,90,100,15,20,25,30,65]:
         print("You've found a",Fire_sword.name)
-    if loot in [2,3,5,7,11,13,17,19,23,29,31,34,37,100]:
+if loot in [2,3,5,7,11,13,17,19,23,29,31,34,37,100]:
         print("You found a",Gernade.name)
-    if loot in [1]:
+if loot in [1]:
         print("You've found",The_power_of_the_sun.name)
 
 Fists = weapon(name="Fists", weapon_type="blunt", damage=3, value=0)

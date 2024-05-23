@@ -53,6 +53,9 @@ def main():
         
         try:
             choice = int(input("Your choice: "))
+            print(f"\n{player.name}'s inventory:")
+            for item in player.inventory:
+                    print(f"- {item.name}")
             if choice == 0:
                 break
             shop.purchase_item(choice, player)
