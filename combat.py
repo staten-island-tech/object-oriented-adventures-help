@@ -1,4 +1,4 @@
-import math
+
 from character import Hero, Enemy
 from weapon import wooden_sword, Ray_gun
 

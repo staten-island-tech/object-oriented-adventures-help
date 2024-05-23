@@ -1,4 +1,5 @@
 from weapon import fists        
+from weapon import fists, wooden_sword
 
 class playable_character:
     def __init__(self, characters_name, characters_hp, characters_atk ,characters_defense):
@@ -31,3 +32,11 @@ Skibidi_Rizzler = playable_character(name = "Skibidi Rizzler", characters_hp=300
 
 
 
+class Enemy(Character):
+    def __init__(self,
+                 name: str,
+                 health: int,
+                 weapon,
+                 ) -> None:
+        super().__init__(name=name, health=health)
+        self.weapon = wooden_sword
