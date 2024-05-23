@@ -6,9 +6,6 @@ class Item:
     self.description = descripiton
 
 
-def currencyfinal()
-      currency - item_to_buy.price = currency_final
-
 # Create some sample items
 potion = Item("Healing Potion", 30, "❤️🩹" )
 sword = Item("Fire Sword" , 100 ,"🔥🔥🔥")
@@ -23,8 +20,8 @@ def shop(inventory, currency):
 
   # Get user input for purchase
   while True:
-    choice = input("What would you like to buy? (or 'b' to leave) ")
-    if choice == "b":
+    choice = input("Enter the name of the item you want to buy or '0' to exit:")
+    if choice == 0: 
       break
     
     # Check for valid item choice
@@ -49,4 +46,4 @@ shop(inventory, currency)
 
 # Print remaining inventory and currency
 print("Your inventory:", inventory)
-print("Remaining gold:", )
+print("Remaining gold:", currency )
