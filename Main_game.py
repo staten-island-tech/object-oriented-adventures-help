@@ -1,5 +1,4 @@
 import random
-from monster import Monster
 from weapons import weapon
 #Random
 inventory = []

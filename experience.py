@@ -1,4 +1,8 @@
-level = []
+import math
+from Main_game import Slime, Blaze, Helios, Octo
+from weapons import Fists, Ray_gun, Fire_sword, Gernade
+
+""" level = []
 Slime=0.2
 Blaze=0.3
 for i in range(24):
@@ -9,21 +13,16 @@ for i in range(24):
         level.append(Blaze)
     
     for Slime in level:
-        print(Slime)
+        print(Slime) """
 
+hero = Hero(name="hero", health=100)
+hero.equip(Ray_gun)
+enemy = Enemy(name="enemy", health=30, weapon=wooden_sword)
 
-""" level = []
-Slime=0.2
-Blaze=0.3
-for i in range(24): 
-    monster = (input("Test: "))
-    if monster == "slime":
-        level.append(Slime)
-    elif monster == "blaze":
-        level.append(Blaze)
+while True:
+    hero.attack(enemy)
+    enemy.attack(hero)
 
-level.append(monster)
-print("XP:")
-for monster in level:
-    print(monster)
- """
+    print(f"health of {hero.name}: {hero.health}")
+    print(f"health of {enemy.name}: {enemy.health}")
+    input()
