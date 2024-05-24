@@ -103,7 +103,7 @@ def npc():
         print("Dr. Octavious: The power of the sun, in the palm of my hands.")
 
 User = input("Please enter a username: ") 
-print(f"Welcome {User}")
+print(f"Welcome {User} (your data will not be saved)")
 click = input("")
 if click == "":
     click = input("Throughout the game you can collect many chests and fight various monsters ")

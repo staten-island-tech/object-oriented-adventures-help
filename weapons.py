@@ -26,11 +26,11 @@ Ray_gun = weapon(name="Ray Gun",
     value=15)
 
 Gernade = weapon(name="Gernade",
-    weapon_type="ranged",
+    weapon_type="ranged projectile",
     damage=6,
     value=2)
 
 The_power_of_the_sun = weapon(name="The Power of the Sun",
     weapon_type="???",
     damage=1000000000,
-    value=100)
+    value=1000)
