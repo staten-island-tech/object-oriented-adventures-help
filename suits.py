@@ -31,7 +31,7 @@ class suits:
         self.damage = damage
         self.value = value 
 
-        shockwave = suits(name="showckwave", 
+shockwave = suits(name="shockwave", 
                defense="sharp", 
                damage=4, 
-               value=10)
+               value=10
