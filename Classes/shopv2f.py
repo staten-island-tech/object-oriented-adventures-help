@@ -45,26 +45,39 @@ def main():
     shop.add_item(Item("Grenade", 5))
     shop.add_item(Item("The Power of the Sun" , 1000))
     
-    # Create player
-    player = Player("Hero", 100)
+# Define the shop function
+def shop(inventory, currency):
+  # Display items and prices
+  print("Welcome to the shop!")
+  for item in [potion, sword, armor]:
+    print(f"{item.name}:,  {item.price} gold" ,item.description )
+
+  # Get user input for purchase
+  while True:
+    choice = input("Enter the name of the item you want to buy or '0' to exit:")
+    if choice == 0: 
+      break
     
-    while True:
-        print("\nWelcome to the shop!")
-        shop.display_items()
-        print(f"\n{player.name}'s money: ${player.money}")
-        print("Enter the number of the item you want to buy or '0' to exit:")
-        
-        try:
-            choice = int(input("Your choice: "))
-            if choice == 0:
-                break
-            shop.purchase_item(choice, player)
-        except ValueError:
-            print("Invalid input. Please enter a number.")
+    # Check for valid item choice
+    if choice.lower() in [item.name.lower() for item in [potion, sword, armor]]:
+      item_to_buy = next(item for item in [potion, sword, armor] if item.name.lower() == choice.lower())
+      # Check if player has enough money
+      if currency >= item_to_buy.price:
+        inventory.append(item_to_buy.name)  # Add item to inventory
+        currency -= item_to_buy.price   # Deduct price from currency
+        print(f"You bought {item_to_buy.name}!")
+      else:
+        print("Insufficient funds!")
+    else:
+      print("Invalid item choice.")
 
-    print(f"\n{player.name}'s inventory:")
-    for item in player.inventory:
-        print(f"- {item.name}")
+# Initialize player inventory and currency
+inventory = []
+currency = 100
 
-if __name__ == "__main__":
-    main()
+# Run the shop function
+shop(inventory, currency)
+
+# Print remaining inventory and currency
+print("Your inventory:", inventory)
+print("Remaining gold:", currency )
