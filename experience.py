@@ -1,4 +1,4 @@
-""" level = []
+level = []
 Slime=0.2
 Blaze=0.3
 for i in range(24):
@@ -10,8 +10,9 @@ for i in range(24):
     
     for Slime in level:
         print(Slime)
- """
-level = []
+
+
+""" level = []
 Slime=0.2
 Blaze=0.3
 for i in range(24): 
@@ -25,3 +26,4 @@ level.append(monster)
 print("XP:")
 for monster in level:
     print(monster)
+ """

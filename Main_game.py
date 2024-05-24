@@ -40,12 +40,12 @@ def Random():
         print("[npc]")
         npc()
 
-Slime = Monster(name = "Slime", hp = 30, hp_max = 30, dmg = 5)
-Blaze = Monster(name = "Blaze", hp = 65, hp_max = 65, dmg = 15)
-Helios = Monster(name = "Helios", hp = 60, hp_max = 60, dmg = 15)
-Octo = Monster(name = "octo", hp = 45, hp_max = 45, dmg = 12)
-Flaker = Monster(name = "Flaker", hp = 72, hp_max = 72, dmg = 17)
-Leviathon = Monster(name = "Leviathon", hp = 105, hp_max = 105, dmg = 26)
+Slime = Monster(name = "Slime", hp = 30, hp_max = 30, dmg = 5, exp = 0.3)
+Blaze = Monster(name = "Blaze", hp = 65, hp_max = 65, dmg = 15, exp = 0.4)
+Helios = Monster(name = "Helios", hp = 60, hp_max = 60, dmg = 15, exp = 0.4)
+Octo = Monster(name = "octo", hp = 45, hp_max = 45, dmg = 12, exp = 0.6)
+Flaker = Monster(name = "Flaker", hp = 72, hp_max = 72, dmg = 17, exp = 0.9)
+Leviathon = Monster(name = "Leviathon", hp = 105, hp_max = 105, dmg = 26, exp = 1.0)
 
 
 def loot():
