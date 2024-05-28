@@ -5,6 +5,9 @@ import random
 #Random
 inventory = []
 
+
+
+
 def chest():
     chest = random.randint(1,50)
     if chest in [1,5,10,11,15,20,21,25,30,31,35,40,]:
@@ -83,15 +86,18 @@ for i in range(24973932195):
     if Direction == "Left" or "left":
         print(f"Moving {Direction}")
         Random()
+        question = input("What do you want to do right now: open shop, fight enemy, run, move up, down, right or left")
 
     elif Direction == "Right" or "right":
         print(f"Moving {Direction}")
         Random()
-    
+    question = input("What do you want to do right now: open shop(1), fight enemy(2), run, move up, down, right or left")
+    if input == 1:
+        from shopv2 import shop ,import item
     elif Direction == "Forward" or "forward":
         print(f"Moving {Direction}")
         Random()
-
+    question = input("What do you want to do right now: open shop, fight enemy, run, move up, down, right or left")
         
     elif Direction == "Backward" or "backward":
         print(f"Moving {Direction}")
@@ -99,3 +105,4 @@ for i in range(24973932195):
 
         inventory.append(loot)
         print(inventory)
+    question = input("What do you want to do right now: open shop, fight enemy, run, move up, down, right or left")

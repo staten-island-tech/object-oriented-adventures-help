@@ -33,8 +33,7 @@ Skibidi_Rizzler = playable_character(name = "Skibidi Rizzler", characters_hp=300
 
 
 class Enemy(Character):
-    def __init__(self,
-                 name: str,
+    def __init__(self,name: str,
                  health: int,
                  weapon,
                  ) -> None:
