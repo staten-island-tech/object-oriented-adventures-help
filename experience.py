@@ -15,9 +15,10 @@ for i in range(24):
     for Slime in level:
         print(Slime) """
 
-hero = Hero(name="hero", health=100)
+
+hero = Hero(name="hero", health=100, exp=0)
 hero.equip(Ray_gun)
-enemy = Enemy(name="enemy", health=30, weapon=wooden_sword)
+enemy = Enemy(name="enemy", health=30, weapon=Fire_sword)
 
 while True:
     hero.attack(enemy)
