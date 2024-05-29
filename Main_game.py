@@ -48,7 +48,6 @@ Octo = Monster(name = "octo", hp = 45, hp_max = 45, dmg = 12, exp = 0.6)
 Flaker = Monster(name = "Flaker", hp = 72, hp_max = 72, dmg = 17, exp = 0.9)
 Leviathon = Monster(name = "Leviathon", hp = 105, hp_max = 105, dmg = 26, exp = 1.0)
 
-
 def loot():
     loot = random.randint(0,100)
     if loot in [3,6,9,12,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60,63,66,69,72,75,78,81,84,87,90,93,96,99]:
@@ -60,10 +59,10 @@ def loot():
     if loot in [1]:
         print("You've found",The_power_of_the_sun.name, The_power_of_the_sun.weapon_type, The_power_of_the_sun.damage)
 
-Fists = weapon(name="Fists", weapon_type="|blunt|", damage=3, value=0)
-Fire_sword = weapon(name="Fire Sword", weapon_type="|sharp|", damage=22, value=10)
-Ray_gun = weapon(name="Ray Gun", weapon_type="|ranged|", damage=14, value=15)
-Gernade = weapon(name="Gernade", weapon_type="|ranged|", damage=6, value=2)
+Fists = weapon(name="Fists", weapon_type="|Blunt|", damage=3, value=0)
+Fire_sword = weapon(name="Fire Sword", weapon_type="|Mythical|", damage=22, value=10)
+Ray_gun = weapon(name="Ray Gun", weapon_type="|Ranged|", damage=14, value=15)
+Gernade = weapon(name="Gernade", weapon_type="|Projectile|", damage=6, value=2)
 The_power_of_the_sun = weapon(name="The Power of the Sun", weapon_type="|???|", damage=1000000000, value=100)
 
 def npc():
