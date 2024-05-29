@@ -1,5 +1,7 @@
 import random
 from weapons import weapon
+from monster import Monster
+
 #Random
 inventory = []
 def loot():
