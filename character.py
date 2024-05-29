@@ -1,7 +1,5 @@
-from weapon import fists
-
-
-
+from weapons import fists        
+from weapons import fists, wooden_sword, Fire_sword, Iron_sword, Recurve_Bow, Grenade, Staff_of_The_Abyss
 class Character:
     def __init__(self, name: str, health: int) -> None:
         self.name = name 
@@ -13,13 +11,15 @@ class Character:
     def attack(self, target) -> None:
         target.health -= self.weapon.damage
         target.health = max(target.health, 0)
-        print(f"{self.name} dealt {self.weapon.damage} damage to {target.name} with {self.weapon.name}")
-        
+
+
+
 class Hero(Character):
     def __init__(self,
                  name: str,
                  health: int) -> None:
         super().__init__(name=name, health=health)
+    
 
         self.default_weapon = self.weapon
 
@@ -32,6 +32,7 @@ class Hero(Character):
         self.weapon = self.default_weapon
 
 
+
 class Enemy(Character):
     def __init__(self,
                  name: str,
@@ -39,4 +40,44 @@ class Enemy(Character):
                  weapon,
                  ) -> None:
         super().__init__(name=name, health=health)
-        self.weapon = weapon
+        self.weapon = wooden_sword
+
+Caseoh = Enemy(name = "Gary Zhou", health = 500, weapon = Fire_sword )
+Archer = Enemy(name = "Archer", health = 30, weapon = Recurve_Bow)
+Dark_Mage = Enemy(name = "Dark Mage", health = 20, weapon = Staff_of_The_Abyss)
+Abyss_Knight = Enemy(name = "Abyss Knight", health= 50, weapon = Iron_sword)
+Brute =  Enemy(name = "Brute", health= 80, weapon = Iron_sword)
+Gorlock_the_Destroyer = Enemy(name = "Gorlock the Destroyer", health=200, Weapon = fists)
+Skibidi_Rizzler = Enemy(name = "Skibidi Rizzler", health=300, weapon = Grenade )
+
+
+
+
+
+
+
+class enemy:
+    def __init__(self , mob_name , mob_hp , mob_atk, mob_defense):
+        self.name = mob_name
+        self.hp = mob_hp
+        self.
+       
+
+
+    def attack(self, target) -> None:
+        target.health -= self.weapon.damage
+        target.health = max(target.health, 0)
+
+
+
+
+
+
+class Enemy(Character):
+    def __init__(self,
+                 name: str,
+                 health: int,
+                 weapon,
+                 ) -> None:
+        super().__init__(name=name, health=health)
+        self.weapon = wooden_sword
