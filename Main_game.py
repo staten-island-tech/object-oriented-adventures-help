@@ -1,4 +1,7 @@
-import random 
+from shopv2 import Shop
+foo = Shop()
+
+import random
 from monster import Monster
 from weapons import weapon
 #Random
@@ -116,23 +119,27 @@ for i in range(24973932195):
     direction = Direction.upper()
     if Direction == "Left" or "left":
         print(f"Moving {Direction}")
-        Random()
+        random_number
         loot()
+        question = input("What do you want to do right now: open shop(1), fight enemy(2), run, move up, down, right or left")
+    if input == 1:
+         foo.shop()
 
     elif Direction == "Right" or "right":
         print(f"Moving {Direction}")
-        Random()
+        random_number
         loot()
-
+        question = input("What do you want to do right now: open shop(1), fight enemy(2), run, move up, down, right or left")
+    if input == 1:
+        foo.shop()
     elif Direction == "Forward" or "forward":
         print(f"Moving {Direction}")
-        Random()
+        random_number
         loot()
 
     elif Direction == "Backward" or "backward":
         print(f"Moving {Direction}")
-        Random()
-        loot()
+        random_number
 
 """ Shockwave = "[Ability]:Energy Field || [Damage]:+3:"
 Magman = "[Ability]:Lava Spray || [Damage]:+2.5:"
