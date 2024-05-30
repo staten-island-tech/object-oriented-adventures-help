@@ -3,7 +3,7 @@ class Item:
         self.name = name
         self.price = price
 
-class Shop():
+class Shop:
     def __init__(self):
         self.items = []
         
@@ -40,10 +40,10 @@ def main():
     shop.add_item(Item("Sword", 50))
     shop.add_item(Item("Shield", 30))
     shop.add_item(Item("Potion", 10))
-    shop.add_item(Item("M16A3", 70 ))
+    shop.add_item(Item("M16A3", 70))
     shop.add_item(Item("Ray_Gun", 15))
     shop.add_item(Item("Grenade", 5))
-    shop.add_item(Item("The Power of the Sun" , 1000))
+    shop.add_item(Item("The Power of the Sun", 1000))
     
     # Create player
     player = Player("Hero", 100)
@@ -51,7 +51,7 @@ def main():
     while True:
         print("\nWelcome to the shop!")
         shop.display_items()
-        print(f"\n {player.name}'s money: ${player.money}")
+        print(f"\n{player.name}'s money: ${player.money}")
         print("Enter the number of the item you want to buy or '0' to exit:")
         
         try:
@@ -59,8 +59,6 @@ def main():
             if choice == 0:
                 break
             shop.purchase_item(choice, player)
-            if player.money <= item.price:
-                print("Insufficient Funds ")
         except ValueError:
             print("Invalid input. Please enter a number.")
 
