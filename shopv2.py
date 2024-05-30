@@ -3,7 +3,7 @@ class Item:
         self.name = name
         self.price = price
 
-class Shop:
+class Shop():
     def __init__(self):
         self.items = []
         
@@ -51,7 +51,7 @@ def main():
     while True:
         print("\nWelcome to the shop!")
         shop.display_items()
-        print(f"\n{player.name}'s money: ${player.money}")
+        print(f"\n {player.name}'s money: ${player.money}")
         print("Enter the number of the item you want to buy or '0' to exit:")
         
         try:
@@ -59,6 +59,8 @@ def main():
             if choice == 0:
                 break
             shop.purchase_item(choice, player)
+            if player.money <= item.price:
+                print("Insufficient Funds ")
         except ValueError:
             print("Invalid input. Please enter a number.")
 
