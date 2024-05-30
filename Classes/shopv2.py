@@ -40,10 +40,10 @@ def main():
     shop.add_item(Item("Sword", 50))
     shop.add_item(Item("Shield", 30))
     shop.add_item(Item("Potion", 10))
-    shop.add_item(Item("M16A3", 70 ))
+    shop.add_item(Item("M16A3", 70))
     shop.add_item(Item("Ray_Gun", 15))
     shop.add_item(Item("Grenade", 5))
-    shop.add_item(Item("The Power of the Sun" , 1000))
+    shop.add_item(Item("The Power of the Sun", 1000))
     
     # Create player
     player = Player("Hero", 100)
