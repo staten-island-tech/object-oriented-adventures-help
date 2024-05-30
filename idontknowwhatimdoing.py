@@ -1,9 +1,9 @@
-from shopv2 import Shop
-foo = Shop()
-
+import shopv2
+foo = shopv2
 import random
 from monster import Monster
 from weapons import weapon
+
 
 # Inventory
 inventory = []
@@ -71,7 +71,7 @@ def shop_option():
     while True:
         question = input("What do you want to do right now: open shop(1), fight enemy(2), run, move (w, a, s, d): ").lower()
         if question == '1':
-            foo.shop()
+            foo.shopv2
         elif question in ['2', 'run', 'w', 'a', 's', 'd']:
             break
         else:
