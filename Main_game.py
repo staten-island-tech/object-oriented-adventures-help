@@ -20,7 +20,7 @@ def loot():
 
 
 def Random():
-    random_number = random.randint(1,31)
+    random_number = random.randint(1,37)
     if random_number in [1,2,3,4,5,6,7,8,9,10]:
         print("Nothing")
     if random_number in [14,15,11,12]:
@@ -40,6 +40,8 @@ def Random():
     if random_number in [24,25,26,27]:
         print("[npc]")
         npc()
+    if random_number in [32,33,34,35,36,37]:
+        loot()
 
 Slime = Monster(name = "Slime", hp = 30, hp_max = 30, dmg = 5, exp = 0.3)
 Blaze = Monster(name = "Blaze", hp = 65, hp_max = 65, dmg = 15, exp = 0.4)
