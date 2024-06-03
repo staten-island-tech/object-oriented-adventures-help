@@ -1,4 +1,4 @@
-class Item:
+ class Item:
     def __init__(self, name, price):
         self.name = name
         self.price = price
@@ -68,4 +68,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    

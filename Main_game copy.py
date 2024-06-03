@@ -1,6 +1,6 @@
 import random
 from character import Hero, Enemy
-from weapon import wooden_sword, Ray_gun
+from weapons import wooden_sword, Ray_gun
 
 #Random
 hero = Hero(name="hero", health=100)
@@ -12,8 +12,8 @@ def fight():
         hero.attack(enemy)
         enemy.attack(hero)
 
-    print(f"health of {hero.name}: {hero.health}")
-    print(f"health of {enemy.name}: {enemy.health}")
+        print(f"health of {hero.name}: {hero.health}")
+        print(f"health of {enemy.name}: {enemy.health}")
     
 User = input("Please enter a username: ") 
 print(f"Welcome {User}")
