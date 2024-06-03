@@ -1,4 +1,3 @@
-from weapons import fists        
 from weapons import *
 class Character:
     def __init__(self, name: str, health: int) -> None:
@@ -36,7 +35,15 @@ class Hero(Character):
 class Enemy(Character):
     def __init__(self,
                  name: str,
-                 health: int,
-                 weapon: str,
+                 health: int
+        
                  ) -> None:
         super().__init__(name=name, health=health)
+
+
+        self.default_weapon = self.weapon
+        
+
+    def equip(self, weapon) -> None:
+        self.weapon = weapon
+        print(f"{self.name} equipped a(n) {self.weapon.name}!")

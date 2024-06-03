@@ -1,4 +1,4 @@
-import json
+
 class weapon:
     def __init__(self, name: str, weapon_type: str, damage: int, value: int) -> None:
         self.name = name 
@@ -54,21 +54,4 @@ The_power_of_the_sun = weapon(name="The Power of the Sun",
     weapon_type="???",
     damage=1000000000,
     value=1000000)
-
-with open("weapon.json", "w") as weapon:
-    json.dump(Grenade, weapon)
-    json.dump(The_power_of_the_sun, weapon)
-    json.dump(Staff_of_The_Abyss, weapon)
-    json.dump(Recurve_Bow, weapon)
-    json.dump(Ray_gun, weapon)
-    json.dump(Fire_sword, weapon)
-    json.dump(Iron_sword, weapon)
-    json.dump(wooden_sword, weapon)
-    json.dump(fists, weapon)
-    
-
-
-
-
-
 
