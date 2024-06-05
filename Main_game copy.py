@@ -1,6 +1,6 @@
 import random
 from character import Hero, Enemy
-from weapons import wooden_sword, Ray_gun
+from weapon import wooden_sword, Ray_gun
 
 #Random
 hero = Hero(name="hero", health=100)

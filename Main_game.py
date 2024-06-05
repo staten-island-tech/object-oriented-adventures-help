@@ -1,6 +1,3 @@
-from shopv2 import Shop
-foo = Shop()
-
 import random
 from monster import Monster
 from weapons import weapon
@@ -21,15 +18,13 @@ def loot():
         print(The_power_of_the_sun)
 
 
-def random_number():
+def Random():
     random_number = random.randint(1,31)
     if random_number in [1,2,3,4,5,6,7,8,9,10]:
         print("Nothing")
     if random_number in [14,15,11,12]:
-        print("found loot")
-        loot() 
+        print("Nothing")
     if random_number in [16,20,13]:
-
         print(Slime)
     if random_number in [17,21]:
         print(Blaze)
@@ -37,19 +32,13 @@ def random_number():
         print(Helios)
     if random_number in [19,23]:
         print(Octo)
-
-Slime = "[Slime] HP:(30) ATK:(5)"
-Blaze = "[Blaze] HP:(65) ATK:(15)"
-Helios = "[Helios] HP:(60) ATK:(15)"
-Octo = "[Octo] HP:(45} ATK:(12)"
-
-if random_number in [28,29]:
-    print("Flaker")
-if random_number in [31,30]:
-    print("Leviathon")
-if random_number in [24,25,26,27]:
-    print("[npc]")
-    npc()
+    if random_number in [28,29]:
+        print(Flaker)
+    if random_number in [31,30]:
+        print(Leviathon)
+    if random_number in [24,25,26,27]:
+        print("[npc]")
+        npc()
 
 Slime = Monster(name = "Slime", hp = 30, hp_max = 30, dmg = 5)
 Blaze = Monster(name = "Blaze", hp = 65, hp_max = 65, dmg = 15)
@@ -58,41 +47,23 @@ Octo = Monster(name = "octo", hp = 45, hp_max = 45, dmg = 12)
 Flaker = Monster(name = "Flaker", hp = 72, hp_max = 72, dmg = 17)
 Leviathon = Monster(name = "Leviathon", hp = 105, hp_max = 105, dmg = 26)
 
+
 def loot():
     loot = random.randint(0,100)
     if loot in [3,6,9,12,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60,63,66,69,72,75,78,81,84,87,90,93,96,99]:
-
-        print("You've found a", Ray_gun)
+        print("You've found a",Ray_gun.name, Ray_gun.weapon_type, Ray_gun.damage)
     if loot in [10,20,30,40,50,60,70,80,90,100,15,20,25,30,65]:
-        print("You've found",Fire_sword)
-    if loot in [2,3,5,7,11,13,17,19,23,29,31,34,37,]:
-        print("You found a grenade",Gernade)
-    if loot in [1,100]:
-        print("You've found", The_power_of_the_sun)
+        print("You've found a",Fire_sword.name, Fire_sword.weapon_type, Fire_sword.damage)
+    if loot in [2,3,5,7,11,13,17,19,23,29,31,34,37,100]:
+        print("You found a",Gernade.name, Gernade.weapon_type, Gernade.damage)
+    if loot in [1]:
+        print("You've found",The_power_of_the_sun.name, The_power_of_the_sun.weapon_type, The_power_of_the_sun.damage)
 
-
-Ray_gun = "[Ray Gun] DMG:(8)"
-Fire_sword = "[Fire Sword] DMG:(12)"
-Gernade = "[Gernade] DMG:(3)"
-The_power_of_the_sun = "[The Power of the Sun] DMG:(10000000000000)"
-
-print("You've found a",Ray_gun.name)
-if loot in [10,20,30,40,50,60,70,80,90,100,15,20,25,30,65]:
-        print("You've found a",Fire_sword.name)
-if loot in [2,3,5,7,11,13,17,19,23,29,31,34,37,100]:
-        print("You found a",Gernade.name)
-if loot in [1]:
-        print("You've found",The_power_of_the_sun.name)
-
-Fists = weapon(name="Fists", weapon_type="blunt", damage=3, value=0)
-Fire_sword = weapon(name="Fire Sword", weapon_type="sharp", damage=22, value=10)
-Ray_gun = weapon(name="Ray Gun", weapon_type="ranged", damage=14, value=15)
-Gernade = weapon(name="Gernade", weapon_type="ranged", damage=6, value=2)
-
-The_power_of_the_sun = weapon(name="The Power of the Sun",
-    weapon_type="???",
-    damage=1000000000,
-    value=100)
+Fists = weapon(name="Fists", weapon_type="|blunt|", damage=3, value=0)
+Fire_sword = weapon(name="Fire Sword", weapon_type="|sharp|", damage=22, value=10)
+Ray_gun = weapon(name="Ray Gun", weapon_type="|ranged|", damage=14, value=15)
+Gernade = weapon(name="Gernade", weapon_type="|ranged|", damage=6, value=2)
+The_power_of_the_sun = weapon(name="The Power of the Sun", weapon_type="|???|", damage=1000000000, value=100)
 
 def npc():
     person = random.randint(0,10)
@@ -106,40 +77,13 @@ def npc():
         print("Dr. Octavious: The power of the sun, in the palm of my hands.")
 
 User = input("Please enter a username: ") 
-print(f"Welcome {User} (your data will not be saved)")
+print(f"Welcome {User}")
 click = input("")
 if click == "":
-    click = input("Throughout the game you can collect many chests and fight various monsters ")
-    click = input("Chests will contain weapons of various rarities depending on your luck ")
+    click = input("Throughout the game you can collect many weapons which can be used to fight various monsters ")
+    click = input("All weapons have a random chance of spawning and deal a certain amount of damage ")
     click = input("Use these weapons to fight monsters ")
     click = input("Lastly, have fun! (probably won't) ")
-
-for i in range(24973932195):
-    Direction = input("Forward/Backward/Left/Right: ")
-    direction = Direction.upper()
-    if Direction == "Left" or "left":
-        print(f"Moving {Direction}")
-        random_number
-        loot()
-        question = input("What do you want to do right now: open shop(1), fight enemy(2), run, move up, down, right or left")
-    if input == 1:
-         foo.shop()
-
-    elif Direction == "Right" or "right":
-        print(f"Moving {Direction}")
-        random_number
-        loot()
-        question = input("What do you want to do right now: open shop(1), fight enemy(2), run, move up, down, right or left")
-    if input == 1:
-        foo.shop()
-    elif Direction == "Forward" or "forward":
-        print(f"Moving {Direction}")
-        random_number
-        loot()
-
-    elif Direction == "Backward" or "backward":
-        print(f"Moving {Direction}")
-        random_number
 
 """ Shockwave = "[Ability]:Energy Field || [Damage]:+3:"
 Magman = "[Ability]:Lava Spray || [Damage]:+2.5:"

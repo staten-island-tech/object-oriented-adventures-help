@@ -1,5 +1,5 @@
-from weapon import fists        
-from weapon import fists, wooden_sword
+import os     
+from weapons import fists, wooden_sword , Fire_sword, Ray_gun, Grenade
 
 class playable_character:
     def __init__(self, characters_name, characters_hp, characters_atk ,characters_defense):
@@ -7,12 +7,16 @@ class playable_character:
         self.hp = characters_hp
         self.atk = characters_atk
         self.defense = characters_defense
+if playable_character.hp < 0: 
+    print("You Died....... bum")
+    os.abort()
 
 class enemy:
     def __init__(self , mob_name , mob_hp , mob_atk, mob_defense):
         self.name = mob_name
         self.hp = mob_hp
-        self.
+        self.atk = mob_atk
+        self.defense = mob_defense
        
 
 
@@ -21,7 +25,7 @@ class enemy:
         target.health = max(target.health, 0)
 
 
-Caseoh = playable_character(name = "Gary Zhou", characters_hp = 500, characters_atk = 20 , characters_defense = 5)
+Gary_Zhou = playable_character(name = "Gary Zhou", characters_hp = 500, characters_atk = 20 , characters_defense = 5)
 Archer = playable_character(name = "Archer", characters_hp = 30, characters_atk = 30, characters_defense= 0 )
 Wizard = playable_character(name = "Wizard", characters_hp = 20, characters_atk= 35, characters_defense= 0)
 Knight = playable_character(name = "Knight", characters_hp= 50, characters_atk= 12, characters_defense= 2 )

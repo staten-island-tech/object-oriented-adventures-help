@@ -22,7 +22,7 @@ def loot():
     if loot in [201,350]:
         print(Gernade)
         if self.weapon == fists:
-        elif self.weapon == wooden_sword:
+            elif self.weapon == wooden_sword:
             Hero.equip (Gernade)
 
     if loot in [351,450]:
