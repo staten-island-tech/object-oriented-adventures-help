@@ -1,7 +1,7 @@
 import math
 Slime=0.2
 Blaze=0.3
-startXP = 0
+startXP += Slime
 level = []
 
 for i in range(3):
