@@ -1,5 +1,5 @@
 import math
-from character import Hero, Enemy
+from player import Hero, Enemy
 from weapons import *
 
 Death = Enemy(name = "Death", health = 500 ) #Fire Sword

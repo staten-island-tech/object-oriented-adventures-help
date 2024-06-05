@@ -1,7 +1,8 @@
 import shopv2
 import random
-from monster import Monster
 from weapons import weapon
+from player import Player  # Import the Player class
+from enemy import Enemy  # Import the Enemy class
 
 # Inventory
 inventory = []
@@ -11,15 +12,32 @@ def loot():
     loot = random.randint(1, 50)
     if loot in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 41, 42, 43]:
         print("You've found a Ray Gun:", Ray_gun)
+        inventory.append(Ray_gun)
     elif loot in [15, 16, 17, 18, 19, 20, 21, 22, 44, 49, 40]:
         print("You've found a Fire Sword:", Fire_sword)
+        inventory.append(Fire_sword)
     elif loot in [23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 45, 46, 47, 48]:
         print("You've found a Grenade:", Grenade)
+        inventory.append(Grenade)
     elif loot == 50:
         print("You've found The Power of the Sun:", The_power_of_the_sun)
+        inventory.append(The_power_of_the_sun)
+
+# Battle function
+def battle(player, enemy):
+    while player.is_alive() and enemy.is_alive():
+        player.attack_enemy(enemy)
+        if enemy.is_alive():
+            player.take_damage(enemy.attack)
+    
+    if not player.is_alive():
+        print("You have been defeated!")
+    else:
+        print(f"You defeated {enemy.name}!")
+        player.add_gold(enemy.gold)
 
 # Function for random encounter
-def random_number():
+def random_number(player):
     random_number = random.randint(1, 31)
     if random_number in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
         print("Nothing")
@@ -27,23 +45,17 @@ def random_number():
         print("Found loot")
         loot()
     elif random_number in [16, 20, 13]:
-        print(Slime)
+        print("Slime")
+        battle(player, Enemy("Slime", 30, 5, 10))
     elif random_number in [17, 21]:
-        print(Blaze)
+        print("Blaze")
+        battle(player, Enemy("Blaze", 65, 15, 20))
     elif random_number in [18, 22]:
-        print(Helios)
+        print("Helios")
+        battle(player, Enemy("Helios", 60, 15, 25))
     elif random_number in [19, 23]:
-        print(Octo)
-
-# Monster Definitions
-Slime = "[Slime] HP:(30) ATK:(5)"
-Blaze = "[Blaze] HP:(65) ATK:(15)"
-Helios = "[Helios] HP:(60) ATK:(15)"
-Octo = "[Octo] HP:(45) ATK:(12)"
-
-# Additional Monster Definitions
-Flaker = Monster(name="Flaker", hp=72, hp_max=72, dmg=17)
-Leviathon = Monster(name="Leviathon", hp=105, hp_max=105, dmg=26)
+        print("Octo")
+        battle(player, Enemy("Octo", 45, 12, 15))
 
 # Weapon Definitions
 Fists = weapon(name="Fists", weapon_type="blunt", damage=3, value=0)
@@ -106,7 +118,7 @@ shop.add_item(shopv2.Item("Grenade", 5))
 shop.add_item(shopv2.Item("The Power of the Sun", 1000))
 
 # Create player
-player = shopv2.Player(User, 100)
+player = Player(User, 100, 10)
 
 # Game loop
 while True:
@@ -121,8 +133,7 @@ while True:
         elif direction == "d":
             print(f"Moving Right")
         
-        random_number()
-        loot()
+        random_number(player)
         shop_option(shop, player)
     else:
         print("Invalid direction. Please choose W, A, S, or D.")
