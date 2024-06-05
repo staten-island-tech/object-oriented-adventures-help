@@ -5,7 +5,7 @@ class weapon:
         self.damage = damage
         self.value = value 
 
-fists = weapon(name="Fists", 
+Fists = weapon(name="Fists", 
     weapon_type="blunt", 
     damage=3, 
     value=0)
