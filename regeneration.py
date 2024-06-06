@@ -29,9 +29,11 @@ hero.equip(Ray_gun)
 enemy = Gorlock_the_Destroyer
 
 while True:
+    if hero.health ==  0:
+        hero.health = 101
     hero.attack(enemy)
     enemy.attack(hero)
-
+    
     print(f"health of {hero.name}: {hero.health}")
     print(f"health of {enemy.name}: {enemy.health}")
     input()
