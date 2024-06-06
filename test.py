@@ -1,4 +1,4 @@
-from character import Hero, Enemy
+from player import Hero, Enemy
 from weapons import Ray_gun, wooden_sword
 
 

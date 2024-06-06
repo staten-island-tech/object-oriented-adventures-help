@@ -1,5 +1,5 @@
 import math
-from character import Hero, Enemy
+from player import Hero, Enemy
 from weapons_copy import wooden_sword, Ray_gun
 
 

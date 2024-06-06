@@ -1,4 +1,4 @@
-from character import Character 
+from player import Character 
 hero = Character(name="hero", health=100) 
 enemy = Character(name="enemy", health=30) 
 while True: 

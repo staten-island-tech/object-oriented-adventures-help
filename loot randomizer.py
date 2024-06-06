@@ -1,5 +1,5 @@
 import random
-from character import Hero 
+from player import Hero 
 from weapons import fists, wooden_sword, Ray_gun, Fire_sword, Gernade, The_power_of_the_sun
 
 def equip(self, weapon) -> None:

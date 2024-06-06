@@ -1,8 +1,8 @@
-import shopv2
 import random
+from player import Player
+from enemy import Slime, Blaze, Helios, Octo, Flaker, Leviathon
+import shopv2
 from weapons import weapon
-from player import Player  # Import the Player class
-from enemy import Enemy  # Import the Enemy class
 
 # Inventory
 inventory = []
@@ -44,18 +44,10 @@ def random_number(player):
     elif random_number in [14, 15, 11, 12]:
         print("Found loot")
         loot()
-    elif random_number in [16, 20, 13]:
-        print("Slime")
-        battle(player, Enemy("Slime", 30, 5, 10))
-    elif random_number in [17, 21]:
-        print("Blaze")
-        battle(player, Enemy("Blaze", 65, 15, 20))
-    elif random_number in [18, 22]:
-        print("Helios")
-        battle(player, Enemy("Helios", 60, 15, 25))
-    elif random_number in [19, 23]:
-        print("Octo")
-        battle(player, Enemy("Octo", 45, 12, 15))
+    else:
+        enemy = random.choice([Slime(), Blaze(), Helios(), Octo(), Flaker(), Leviathon()])
+        print(f"Encountered {enemy}")
+        battle(player, enemy)
 
 # Weapon Definitions
 Fists = weapon(name="Fists", weapon_type="blunt", damage=3, value=0)
