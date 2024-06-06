@@ -3,7 +3,6 @@ class Character:
     def __init__(self, name: str, health: int) -> None:
         self.name = name 
         self.health = health
-        self.health_max = health
         
         self.weapon = fists
 
@@ -16,9 +15,8 @@ class Character:
 class Hero(Character):
     def __init__(self,
                  name: str,
-                 health: int,
-                 mhealth: int) -> None:
-        super().__init__(name=name, health=health, mhealth=mhealth)
+                 health: int) -> None:
+        super().__init__(name=name, health=health)
     
 
         self.default_weapon = self.weapon

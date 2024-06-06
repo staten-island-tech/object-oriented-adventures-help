@@ -27,7 +27,7 @@ Skibidi_Rizzler.equip(Grenade)
 hero = Hero(name="hero", health=100)
 hero.equip(Ray_gun)
 enemy = Gorlock_the_Destroyer
-    
+
 while True:
     hero.attack(enemy)
     enemy.attack(hero)

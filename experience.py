@@ -1,3 +1,5 @@
+from character import Hero
+hero = Hero(name="hero", health=100)
 Slime=0.2
 Blaze=0.3
 Helios =0.3
@@ -10,6 +12,8 @@ for i in range(3):
     attk = input("Test: ")
     if attk == "s":
         startXP += Slime
+        hero.health + 5
+        print(hero.health)
         print(startXP)
     elif attk == "b":
         startXP += Blaze
