@@ -1,25 +1,23 @@
-# player.py
+from character import Character
 
-class Player:
-    def __init__(self, name, hp, attack, gold=0):
-        self.name = name
-        self.hp = hp
-        self.attack = attack
-        self.gold = gold
-
-    def is_alive(self):
-        return self.hp > 0
-
-    def take_damage(self, damage):
-        self.hp -= damage
-        if self.hp < 0:
-            self.hp = 0
+class Player(Character):
+    def __init__(self, name, hp, attack, gold):
+        super().__init__(name, hp, attack, gold)
+        self.inventory = []
 
     def attack_enemy(self, enemy):
         enemy.take_damage(self.attack)
+        print(f"{self.name} attacks {enemy.name} for {self.attack} damage!")
 
     def add_gold(self, amount):
         self.gold += amount
+        print(f"{self.name} found {amount} gold! Total gold: {self.gold}")
 
-    def __str__(self):
-        return f"{self.name} (HP: {self.hp}, Attack: {self.attack}, Gold: {self.gold})"
+    def add_item(self, item):
+        self.inventory.append(item)
+        print(f"{self.name} adds {item.name} to the inventory.")
+
+    def show_inventory(self):
+        print(f"{self.name}'s Inventory:")
+        for item in self.inventory:
+            print(f"- {item.name} (Damage: {item.damage}, Value: {item.value})")

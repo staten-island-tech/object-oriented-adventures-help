@@ -1,15 +1,9 @@
-
-
-
-
-
-
 import random
+import time
 from player import Player
 from enemy import Slime, Blaze, Helios, Octo, Flaker, Leviathon
 import shopv2
 from weapons import weapon
-import time
 
 # Inventory
 inventory = []
@@ -30,24 +24,47 @@ def loot():
         print("You've found The Power of the Sun:", The_power_of_the_sun)
         inventory.append(The_power_of_the_sun)
 
+# Generate a simple math question
+def generate_math_question():
+    num1 = random.randint(1, 10)
+    num2 = random.randint(1, 10)
+    operation = random.choice(["+", "-", "*"])
+    if operation == "+":
+        answer = num1 + num2
+    elif operation == "-":
+        answer = num1 - num2
+    else:
+        answer = num1 * num2
+    question = f"What is {num1} {operation} {num2}? "
+    return question, answer
+
 # Battle function
 def battle(player, enemy):
     while player.is_alive() and enemy.is_alive():
-        print(f"{player} attacks {enemy.name}!")
-        player.attack_enemy(enemy)
-        if enemy.is_alive():
-            print(f"{enemy.name} attacks {player.name}!")
+        question, answer = generate_math_question()
+        print(f"{player.name} encounters {enemy.name}!")
+        try:
+            player_answer = int(input(question))
+            if player_answer == answer:
+                print("Correct! You attack the enemy.")
+                player.attack_enemy(enemy)
+            else:
+                print("Wrong! The enemy attacks you.")
+                player.take_damage(enemy.attack)
+        except ValueError:
+            print("Invalid input! The enemy attacks you.")
             player.take_damage(enemy.attack)
-    
-    if not player.is_alive():
-        print("You have been defeated!")
-    else:
-        print(f"You defeated {enemy.name}!")
-        player.add_gold(enemy.gold)
+        
+        if not enemy.is_alive():
+            print(f"You defeated {enemy.name}!")
+            player.add_gold(enemy.gold)
+        elif not player.is_alive():
+            print("You have been defeated!")
 
 # Function for random encounter
 def random_number(player):
     random_number = random.randint(1, 50)
+    print(f"Random encounter roll: {random_number}")  # Debug statement
     if random_number in range(1, 7):
         print("Nothing happened.")
     elif random_number in range(14, 16) or random_number in range(11, 13):
@@ -83,7 +100,7 @@ def shop_option(shop, player):
         question = input("What do you want to do right now: open shop(1), fight enemy(2), run, move (w, a, s, d): ").lower()
         if question == '1':
             shop.display_items()
-            print(f"\n{player.name}'s money: ${player.money}")
+            print(f"\n{player.name}'s money: ${player.gold}")
             print("Enter the number of the item you want to buy or '0' to exit:")
             
             try:
