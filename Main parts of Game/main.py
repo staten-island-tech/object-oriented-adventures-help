@@ -23,6 +23,18 @@ def loot():
         print("You've found The Power of the Sun:", The_power_of_the_sun)
         inventory.append(The_power_of_the_sun)
 
+# Function for random encounter
+def random_number(player):
+    random_number = random.randint(1, 31)
+    if random_number in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
+        print("Nothing")
+    elif random_number in [14, 15, 11, 12]:
+        print("Found loot")
+        loot()
+    else:
+        enemy = random.choice([Slime(), Blaze(), Helios(), Octo(), Flaker(), Leviathon()])
+        print(f"Encountered {enemy}")
+
 # Battle function
 def battle(player, enemy):
     while player.is_alive() and enemy.is_alive():
@@ -35,20 +47,7 @@ def battle(player, enemy):
     else:
         print(f"You defeated {enemy.name}!")
         player.add_gold(enemy.gold)
-
-# Function for random encounter
-def random_number(player):
-    random_number = random.randint(1, 31)
-    if random_number in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
-        print("Nothing")
-    elif random_number in [14, 15, 11, 12]:
-        print("Found loot")
-        loot()
-    else:
-        enemy = random.choice([Slime(), Blaze(), Helios(), Octo(), Flaker(), Leviathon()])
-        print(f"Encountered {enemy}")
-        battle(player, enemy)
-
+        
 # Weapon Definitions
 Fists = weapon(name="Fists", weapon_type="blunt", damage=3, value=0)
 Fire_sword = weapon(name="Fire Sword", weapon_type="sharp", damage=22, value=10)
