@@ -1,10 +1,11 @@
 # character.py
 from weapons import *
 class Character:
-    def __init__(self, name: str, health: int) -> None:
+    def __init__(self, name: str, health: int, gold: int) -> None:
         self.name = name 
         self.health = health
         self.health_max = health
+        self.gold = gold
         
         self.weapon = fists
 

@@ -1,15 +1,8 @@
-
-
-
-
-
-
 import random
 from player import Player
 from enemy import Slime, Blaze, Helios, Octo, Flaker, Leviathon
 import shopv2
-from weapons import weapon
-import time
+from weapons import *
 
 # Inventory
 inventory = []
@@ -30,13 +23,23 @@ def loot():
         print("You've found The Power of the Sun:", The_power_of_the_sun)
         inventory.append(The_power_of_the_sun)
 
+# Function for random encounter
+def random_number(player):
+    random_number = random.randint(1, 31)
+    if random_number in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
+        print("Nothing")
+    elif random_number in [14, 15, 11, 12]:
+        print("Found loot")
+        loot()
+    else:
+        enemy = random.choice([Slime(), Blaze(), Helios(), Octo(), Flaker(), Leviathon()])
+        print(f"Encountered {enemy}")
+
 # Battle function
 def battle(player, enemy):
     while player.is_alive() and enemy.is_alive():
-        print(f"{player} attacks {enemy.name}!")
         player.attack_enemy(enemy)
         if enemy.is_alive():
-            print(f"{enemy.name} attacks {player.name}!")
             player.take_damage(enemy.attack)
     
     if not player.is_alive():
@@ -44,26 +47,8 @@ def battle(player, enemy):
     else:
         print(f"You defeated {enemy.name}!")
         player.add_gold(enemy.gold)
+        
 
-# Function for random encounter
-def random_number(player):
-    random_number = random.randint(1, 50)
-    if random_number in range(1, 7):
-        print("Nothing happened.")
-    elif random_number in range(14, 16) or random_number in range(11, 13):
-        print("Found loot!")
-        loot()
-    elif random_number >= 17:
-        enemy = random.choice([Slime(), Blaze(), Helios(), Octo(), Flaker(), Leviathon()])
-        print(f"Encountered {enemy.name}!")
-        battle(player, enemy)
-
-# Weapon Definitions
-Fists = weapon(name="Fists", weapon_type="blunt", damage=3, value=0)
-Fire_sword = weapon(name="Fire Sword", weapon_type="sharp", damage=22, value=10)
-Ray_gun = weapon(name="Ray Gun", weapon_type="ranged", damage=14, value=15)
-Grenade = weapon(name="Grenade", weapon_type="ranged", damage=6, value=2)
-The_power_of_the_sun = weapon(name="The Power of the Sun", weapon_type="???", damage=1000000000, value=100)
 
 # NPC interaction
 def npc():
@@ -83,7 +68,7 @@ def shop_option(shop, player):
         question = input("What do you want to do right now: open shop(1), fight enemy(2), run, move (w, a, s, d): ").lower()
         if question == '1':
             shop.display_items()
-            print(f"\n{player.name}'s money: ${player.money}")
+            print(f"\n{player.name}'s gold: ${player.gold}")
             print("Enter the number of the item you want to buy or '0' to exit:")
             
             try:
@@ -119,7 +104,7 @@ shop.add_item(shopv2.Item("Grenade", 5))
 shop.add_item(shopv2.Item("The Power of the Sun", 1000))
 
 # Create player
-player = Player(User, 150, 15, 0)  # Increased health to 150 and added a healing factor
+player = Player(User, 100, 10)
 
 # Game loop
 while True:
@@ -135,7 +120,6 @@ while True:
             print(f"Moving Right")
         
         random_number(player)
-        player.hp += 1  # Player heals 1 HP after each move
         shop_option(shop, player)
     else:
         print("Invalid direction. Please choose W, A, S, or D.")
