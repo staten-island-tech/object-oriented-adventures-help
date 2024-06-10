@@ -1,7 +1,7 @@
 # player.py
 
 class Player:
-    def __init__(self, name, hp, attack, gold=0):
+    def __init__(self, name, hp, attack, gold):
         self.name = name
         self.hp = hp
         self.attack = attack
