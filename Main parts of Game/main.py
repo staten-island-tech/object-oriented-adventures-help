@@ -1,9 +1,9 @@
 import random
 import time
 from player import Player
-from enemy import Slime, Blaze, Helios, Octo, Flaker, Leviathon
+from enemy import *
 import shopv2
-from weapons import weapon
+from weapons import *
 <<<<<<< Updated upstream
 =======
 
