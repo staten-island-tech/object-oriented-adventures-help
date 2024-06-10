@@ -158,4 +158,3 @@ while True:
         shop_option(shop, player)
     else:
         print("Invalid direction. Please choose W, A, S, or D.")
-#test
