@@ -1,3 +1,4 @@
+import math
 from character import Hero, Enemy
 from weapons import *
 
