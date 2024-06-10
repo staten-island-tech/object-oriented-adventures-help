@@ -18,8 +18,8 @@ def loot():
         print("You've found a Fire Sword:", Fire_sword)
         inventory.append(Fire_sword)
     elif loot in [23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 45, 46, 47, 48]:
-        print("You've found a Grenade:", Grenade)
-        inventory.append(Grenade)
+        print("You've found a Grenade:", Gernade)
+        inventory.append(Gernade)
     elif loot == 50:
         print("You've found The Power of the Sun:", The_power_of_the_sun)
         inventory.append(The_power_of_the_sun)
@@ -76,10 +76,10 @@ def random_number(player):
         battle(player, enemy)
 
 # Weapon Definitions
-Fists = weapon(name="Fists", weapon_type="blunt", damage=3, value=0)
-Fire_sword = weapon(name="Fire Sword", weapon_type="sharp", damage=22, value=10)
-Ray_gun = weapon(name="Ray Gun", weapon_type="ranged", damage=14, value=15)
-Grenade = weapon(name="Grenade", weapon_type="ranged", damage=6, value=2)
+Fists = weapon(name="Fists", weapon_type="blunt", damage=1, value=0)
+Fire_sword = weapon(name="Fire Sword", weapon_type="sharp", damage=22, value=40)
+Ray_gun = weapon(name="Ray Gun", weapon_type="ranged", damage=14, value=30)
+Gernade = weapon(name="Gernade", weapon_type="ranged", damage=6, value=2)
 The_power_of_the_sun = weapon(name="The Power of the Sun", weapon_type="???", damage=1000000000, value=100)
 
 # NPC interaction
