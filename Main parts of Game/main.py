@@ -12,17 +12,24 @@ inventory = []
 def loot():
     loot = random.randint(1, 50)
     if loot in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 41, 42, 43]:
-        print("You've found a Ray Gun:", Ray_gun)
+        print("You've found a Ray Gun:", Ray_gun.weapon_type, Ray_gun.damage, Ray_gun.value)
         inventory.append(Ray_gun)
     elif loot in [15, 16, 17, 18, 19, 20, 21, 22, 44, 49, 40]:
-        print("You've found a Fire Sword:", Fire_sword)
+        print("You've found a Fire Sword:", Fire_sword.weapon_type, Fire_sword.damage, Fire_sword.value)
         inventory.append(Fire_sword)
     elif loot in [23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 45, 46, 47, 48]:
-        print("You've found a Grenade:", Gernade)
+        print("You've found a Grenade:", Gernade.weapon_type, Gernade.damage, Gernade.value)
         inventory.append(Gernade)
     elif loot == 50:
-        print("You've found The Power of the Sun:", The_power_of_the_sun)
+        print("You've found The Power of the Sun:", The_power_of_the_sun.weapon_type, The_power_of_the_sun.damage, The_power_of_the_sun.value)
         inventory.append(The_power_of_the_sun)
+
+# Weapon Definitions
+Fists = weapon(name="Fists", weapon_type="|blunt|", damage=1, value=0)
+Fire_sword = weapon(name="Fire Sword", weapon_type="|sharp|", damage=22, value=40)
+Ray_gun = weapon(name="Ray Gun", weapon_type="|ranged|", damage=14, value=30)
+Gernade = weapon(name="Gernade", weapon_type="|ranged|", damage=6, value=2)
+The_power_of_the_sun = weapon(name="The Power of the Sun", weapon_type="|???|", damage=1000000000, value=100)
 
 # Generate a simple math question
 def generate_math_question():
@@ -75,13 +82,6 @@ def random_number(player):
         print(f"Encountered {enemy.name}!")
         battle(player, enemy)
 
-# Weapon Definitions
-Fists = weapon(name="Fists", weapon_type="blunt", damage=1, value=0)
-Fire_sword = weapon(name="Fire Sword", weapon_type="sharp", damage=22, value=40)
-Ray_gun = weapon(name="Ray Gun", weapon_type="ranged", damage=14, value=30)
-Gernade = weapon(name="Gernade", weapon_type="ranged", damage=6, value=2)
-The_power_of_the_sun = weapon(name="The Power of the Sun", weapon_type="???", damage=1000000000, value=100)
-
 # NPC interaction
 def npc():
     person = random.randint(0, 10)
@@ -120,9 +120,11 @@ User = input("Please enter a username: ")
 print(f"Welcome {User} (your data will not be saved)")
 click = input("")
 if click == "":
-    input("Throughout the game you can collect many chests and fight various monsters. Press Enter to continue...")
-    input("Chests will contain weapons of various rarities depending on your luck. Press Enter to continue...")
-    input("Use these weapons to fight monsters. Press Enter to continue...")
+    input("Throughout the game you can collect various weapons and fight monsters using them. Press Enter to continue...")
+    input("Some monsters might take longer to beat than others but will give you more gold. Press Enter to continue...")
+    input("Gold can be used to buy weapons from the shop(still in development). Press Enter to continue...")
+    input("To fight the monsters you have to answer a series of math problems. Press Enter to continue...")
+    input("Correct answer = Deal damage |Incorrect answer = X_X. Press Enter to continue...")
     input("Lastly, have fun! (probably won't). Press Enter to start the game...")
 
 # Create shop and items
