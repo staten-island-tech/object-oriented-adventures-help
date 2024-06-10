@@ -37,7 +37,7 @@ Recurve_Bow = weapon(name="Recurve Bow",
     damage=30, 
     value=60)
 
-Staff_of_The_Abyss = weapon(name="Staff_of_The_Abyss", 
+Staff_of_The_Abyss = weapon(name="Stasff_of_The_Abyss", 
     weapon_type="dark magic", 
     damage=35, 
     value=72)
@@ -45,13 +45,11 @@ Staff_of_The_Abyss = weapon(name="Staff_of_The_Abyss",
 
 
 
-Grenade = weapon(name="Grenade",
+Gernade = weapon(name="Gernade",
     weapon_type="ranged",
     damage=6,
     value=2)
 
 The_power_of_the_sun = weapon(name="The Power of the Sun",
     weapon_type="???",
-    damage=1000000000,
-    value=1000000)
-
+    damage=1000000000, value=100)
