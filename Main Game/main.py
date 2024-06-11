@@ -95,12 +95,12 @@ def npc():
         print("Dr. Octavious: The power of the sun, in the palm of my hands.")
 
 # Shop interaction
-def shop_option(shop, player):
+def shop_option(shop, player, inventory ):
     while True:
         question = input("What do you want to do right now: open shop(1), fight enemy(2), run, move (w, a, s, d): ").lower()
         if question == '1':
             shop.display_items()
-            print(f"\n{player.name}'s money: ${player.gold}")
+            print(f"\n{player.name}'s money: ${player.gold} {player.inventory}")
             print("Enter the number of the item you want to buy or '0' to exit:")
             
             try:
@@ -155,6 +155,6 @@ while True:
         
         random_number(player)
         player.hp += 1  # Player heals 1 HP after each move
-        shop_option(shop, player)
+        shop_option(shop, player, inventory)
     else:
         print("Invalid direction. Please choose W, A, S, or D.")
